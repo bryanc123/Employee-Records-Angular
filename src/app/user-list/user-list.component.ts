@@ -10,7 +10,9 @@ import { UserService } from '../user.service';
       <div class="user-container">
         <div class="user-record-container" *ngFor="let user of users">
           <div class="user-avatar-container">
-            <div class="user-avatar">Picture Placeholder</div>
+            <a href="/users/{{user.id}}">
+              <div class="user-avatar">Picture Placeholder</div>
+            </a>
             <span>Position</span>
           </div>
           <div class="user-details-container">
@@ -29,6 +31,7 @@ import { UserService } from '../user.service';
     ".user-record-container:nth-child(odd) { background-color: #FFEDCC }",
     ".user-record-container { display: flex; padding: 20px}",
     ".user-avatar-container { text-align:center }",
+    ".user-avatar-container a { color: black; text-decoration: none }",
     ".user-avatar { width: 100px; height: 100px; background-color: yellow }",
     ".user-details-container { line-height: 30px; margin-left: 20px }",
     ".user-name { text-decoration: underline; }",
