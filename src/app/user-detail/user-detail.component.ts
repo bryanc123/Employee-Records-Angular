@@ -36,6 +36,7 @@ import { UserService } from '../user.service';
     </section>
   `,
   styles: [
+    ".users { margin-bottom: 300px }",
     ".back-button-container { margin: 0 20px }",
     ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none }",
     ".back-button:hover { background-color: #FFD280 }",
