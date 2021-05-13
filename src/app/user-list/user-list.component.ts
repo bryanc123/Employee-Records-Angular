@@ -6,6 +6,9 @@ import { UserService } from '../user.service';
 @Component({
   selector: 'app-user-list',
   template: `
+  <div class="back-button-container">
+    <a routerLink="/" class="back-button">Back</a>
+  </div>
     <section class="users">
       <div class="user-container">
         <div class="user-record-container" *ngFor="let user of users">
@@ -28,6 +31,10 @@ import { UserService } from '../user.service';
     </section>
   `,
   styles: [
+    ".back-button-container { margin: 20px 20px }",
+    ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none }",
+    ".back-button:hover { background-color: #FFD280 }",
+    ".user-container { background-color: white }",
     ".user-record-container:nth-child(odd) { background-color: #FFEDCC }",
     ".user-record-container { display: flex; padding: 20px}",
     ".user-avatar-container { text-align:center }",
