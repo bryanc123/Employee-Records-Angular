@@ -25,6 +25,15 @@ export class UserService {
     );
   }
 
+  postUser(user: User): Observable<User> {
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+
+    return this.http.post<User>(this.usersUrl, user)
+      .pipe(catchError(this.handleError));
+  }
+
   private handleError(res: HttpErrorResponse | any) {
     console.error(res.error || res.body.error);
     return observableThrowError(res.error || 'Server error');
