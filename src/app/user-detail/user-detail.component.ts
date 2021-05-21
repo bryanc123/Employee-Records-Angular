@@ -39,7 +39,7 @@ import { UserService } from '../user.service';
     ".users { margin-bottom: 300px }",
     ".user-container { background-color: white }",
     ".back-button-container { margin: 20px 20px }",
-    ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none }",
+    ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none; transition-duration: 0.2s }",
     ".back-button:hover { background-color: #FFD280 }",
     ".user-record-container { display: flex; padding: 20px }",
     ".user-avatar-container { text-align:center }",

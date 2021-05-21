@@ -1,0 +1,59 @@
+<div class="back-button-container">
+    <a routerLink="/" class="back-button">Back</a>
+</div>
+<div class="formContainer">
+    <h2>Add Employee Record</h2>
+    <form id="userForm" [formGroup]="userForm">
+        <label>
+            <p>Name:</p>
+            <input type="text" formControlName="name">
+        </label>
+        <label>
+            <p>Username:</p>
+            <input type="text" formControlName="username">
+        </label>
+        <label>
+            <p>Email:</p>
+            <input type="text" formControlName="email">
+        </label>
+        <div class="formGroup" formGroupName="address">
+            <h3>Address</h3>
+            <label>
+                <p>Street:</p>
+                <input type="text" formControlName="street">
+            </label>
+            <label>
+                <p>Suite:</p>
+                <input type="text" formControlName="suite">
+            </label>
+            <label>
+                <p>City:</p>
+                <input type="text" formControlName="city">
+            </label>
+            <label>
+                <p>ZIP Code:</p>
+                <input type="text" formControlName="zipcode">
+            </label>
+        </div>
+        <label>
+            Phone Number:
+            <input type="text" formControlName="phone">
+        </label>
+        <div class="formGroup" formGroupName="company">
+            <h3>Company</h3>
+            <label>
+                Name:
+                <input type="text" formControlName="name">
+            </label>
+            <label>
+                Catchphrase:
+                <input type="text" formControlName="catchphrase">
+            </label>
+            <label>
+                <p>BS:</p>
+                <input type="text" formControlName="bs">
+            </label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
