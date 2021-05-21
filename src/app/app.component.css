@@ -1,16 +1,3 @@
-a {
-    border-right: 1px solid black;
-    color: black;
-    padding: 10px 40px;
-    text-decoration: none;
-    transition-duration: 0.2s;
-}
-
-a:hover {
-    background-color: #FFD280;
-    cursor: pointer;
-}
-
 .header-container {
     background: linear-gradient(orange 10%, 80%, #FFD280 100%);
     box-shadow: 0px 2px 5px black;
@@ -26,11 +13,57 @@ a:hover {
     list-style: none;
 }
 
+.navigation-menu-item {
+    border-right: 1px solid black;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.navigation-menu-item:hover {
+    background-color: #FFD280;
+    cursor: pointer;
+}
+
+.hamburger-menu-icon {
+    color: black;
+    display: none;
+    flex-grow: 1;
+    text-align: right;
+    text-decoration: none;
+}
+.fa-times {
+    display: none;
+}
+.hamburger-menu {
+    background-color: lightgray;
+    border-top: 1px solid black;
+    display: none;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.hamburger-menu a {
+    color: black;
+    padding: 10px 0;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.hamburger-menu a:hover {
+    background-color: #FFD280;
+}
+
 .introductory-text-container {
     background-color: yellow;
     padding: 20px;
 }
 
 @media screen and (max-width: 450px){
+    .navigation-menu {
+        display: none;
+    }
 
+    .hamburger-menu-icon {
+        display: block;
+    }
 }
