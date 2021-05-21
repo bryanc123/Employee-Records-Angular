@@ -7,14 +7,6 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  /*
-  name: string,
-  username: string,
-  email: string,
-  address: object,
-  phone: string,
-  website: string,
-  company: string*/
 
   userForm = new FormGroup({
     name: new FormControl(''),
