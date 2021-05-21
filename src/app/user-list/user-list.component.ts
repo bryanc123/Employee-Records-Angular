@@ -7,7 +7,7 @@ import { UserService } from '../user.service';
   selector: 'app-user-list',
   template: `
     <div class="back-button-container">
-      <a routerLink="/" class="back-button">Back</a>
+      <a routerLink="/" class="back-button">Back to Home</a>
     </div>
     <section class="users">
       <div class="user-container">
