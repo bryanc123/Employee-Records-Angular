@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -41,5 +42,22 @@
       </div style="display:grid; grid-template-columns: repeat(3, 1fr)">
     </footer>
   </div>
+  <script>
+    // hamburger menu
+    function toggleMenu() {
+      let x = document.getElementsByClassName("hamburger-menu")[0];
+      let openIcon = document.getElementsByClassName("fa-bars")[0];
+      let closeIcon = document.getElementsByClassName("fa-times")[0];
+      if (x.style.display === "flex") {
+          x.style.display = "none";
+          openIcon.style.display = "block";
+          closeIcon.style.display = "none";
+      } else {
+          x.style.display = "flex";
+          openIcon.style.display = "none";
+          closeIcon.style.display = "block";
+      }
+  }
+  </script>
 </body>
 </html>
