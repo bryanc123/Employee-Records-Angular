@@ -25,3 +25,18 @@ app-root {
     flex-shrink: 0;
     padding: 20px;
 }
+
+.footer-container {
+    display:grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    max-width: 900px;
+}
+
+.footer-section-heading {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+}
