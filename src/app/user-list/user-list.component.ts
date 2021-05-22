@@ -14,7 +14,7 @@ import { UserService } from '../user.service';
         <div class="user-record-container" *ngFor="let user of users">
           <div class="user-avatar-container">
             <a href="/users/{{user.id}}">
-              <div class="user-avatar">Picture Placeholder</div>
+              <div class="user-avatar"><i class="far fa-user-circle fa-5x"></i></div>
             </a>
             <span>Position</span>
           </div>
@@ -31,7 +31,7 @@ import { UserService } from '../user.service';
     </section>
   `,
   styles: [
-    ".back-button-container { margin: 20px 20px }",
+    ".back-button-container { margin: 20px }",
     ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none; transition-duration: 0.2s }",
     ".back-button:hover { background-color: #FFD280 }",
     ".user-container { background-color: white }",
@@ -39,7 +39,7 @@ import { UserService } from '../user.service';
     ".user-record-container { display: flex; padding: 20px}",
     ".user-avatar-container { text-align:center }",
     ".user-avatar-container a { color: black; text-decoration: none }",
-    ".user-avatar { width: 100px; height: 100px; background-color: yellow }",
+    ".user-avatar { background-color: yellow; padding: 20px }",
     ".user-details-container { line-height: 30px; margin-left: 20px }",
     ".user-name { text-decoration: underline; }",
     ".catchphrase { font-style: italic }"

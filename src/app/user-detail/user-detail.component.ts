@@ -9,13 +9,13 @@ import { UserService } from '../user.service';
   selector: 'app-user',
   template: `
     <div class="back-button-container">
-      <a routerLink="/users" class="back-button">Back</a>
+      <a routerLink="/users" class="back-button">Back to User Records</a>
     </div>
     <section class="users">
       <div class="user-container">
         <div class="user-record-container">
           <div class="user-avatar-container">
-            <div class="user-avatar">Picture Placeholder</div>
+            <div class="user-avatar"><i class="far fa-user-circle fa-5x"></i></div>
             <span>Position</span>
           </div>
           <div class="user-details-container">
@@ -36,14 +36,13 @@ import { UserService } from '../user.service';
     </section>
   `,
   styles: [
-    ".users { margin-bottom: 300px }",
-    ".user-container { background-color: white }",
-    ".back-button-container { margin: 20px 20px }",
+    ".user-container { background-color: #FFEDCC }",
+    ".back-button-container { margin: 20px }",
     ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none; transition-duration: 0.2s }",
     ".back-button:hover { background-color: #FFD280 }",
     ".user-record-container { display: flex; padding: 20px }",
     ".user-avatar-container { text-align:center }",
-    ".user-avatar { width: 100px; height: 100px; background-color: yellow }",
+    ".user-avatar { background-color: yellow; padding: 20px }",
     ".user-details-container { line-height: 30px; margin-left: 20px }",
     ".user-name { text-decoration: underline; }",
     ".catchphrase { font-style: italic }"
