@@ -1,3 +1,16 @@
+interface Geo {
+    lat: string,
+    lng: string
+}
+
+interface Address {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: Geo
+}
+
 interface Company {
     name: string,
     catchPhrase: string,
@@ -9,7 +22,7 @@ export interface User {
     name: string,
     username: string,
     email: string,
-    address: object,
+    address: Address,
     phone: string,
     website: string,
     company: Company
