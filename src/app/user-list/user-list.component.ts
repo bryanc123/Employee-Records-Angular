@@ -13,7 +13,7 @@ import { UserService } from '../user.service';
       <div class="user-container">
         <div class="user-record-container" *ngFor="let user of users">
           <div class="user-avatar-container">
-            <a href="/users/{{user.id}}">
+            <a routerLink="/users/{{user.id}}">
               <div class="user-avatar"><i class="far fa-user-circle fa-5x"></i></div>
             </a>
             <span>Position</span>
