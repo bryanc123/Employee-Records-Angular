@@ -19,7 +19,7 @@ import { UserService } from '../user.service';
             <span>Position</span>
           </div>
           <div class="user-details-container">
-            <h3><a href="/users/{{user.id}}"><span class="user-name">{{user.name}}</span></a></h3>
+            <h3><a routerLink="/users/{{user.id}}"><span class="user-name">{{user.name}}</span></a></h3>
             <p>Email: {{user.email}}</p>
             <p>Phone Number: {{user.phone}}</p>
             <p>Website: {{user.website}}</p>
