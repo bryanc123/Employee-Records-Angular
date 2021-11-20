@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Employee Records</title>
+  <base href="/Employee-Records-Angular/">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <app-root></app-root>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-section-heading">Links</h3>
+          <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-section-heading">More Links</h3>
+          <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+            <li>Link 4</li>
+            <li>Link 5</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-section-heading">Even More Links</h3>
+          <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // hamburger menu
+    function toggleMenu() {
+      let x = document.getElementsByClassName("hamburger-menu")[0];
+      let openIcon = document.getElementsByClassName("fa-bars")[0];
+      let closeIcon = document.getElementsByClassName("fa-times")[0];
+      if (x.style.display === "flex") {
+          x.style.display = "none";
+          openIcon.style.display = "block";
+          closeIcon.style.display = "none";
+      } else {
+          x.style.display = "flex";
+          openIcon.style.display = "none";
+          closeIcon.style.display = "block";
+      }
+  }
+  </script>
+<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+</html>
