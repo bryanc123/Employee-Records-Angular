@@ -71,7 +71,87 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"content hero-image\">\n    <header>\n      <div class=\"header-container\">\n        <h1><a href=\"/\" class=\"site-title\"><i class=\"far fa-id-badge\"></i> {{title}}</a></h1>\n        <ul class=\"navigation-menu\">\n          <li><a routerLink=\"/\" class=\"navigation-menu-item\">Home</a></li>\n          <li><a routerLink=\"/users\" class=\"navigation-menu-item\">Records</a></li>\n          <li><a routerLink=\"/add-user\" class=\"navigation-menu-item\">Add User</a></li>\n        </ul>\n        <a href=\"javascript:void(0);\" class=\"hamburger-menu-icon\" onClick=\"toggleMenu()\">\n          <i class=\"fa fa-bars fa-2x\"></i>\n          <i class=\"fa fa-times fa-2x\"></i>\n        </a>\n      </div>\n    </header>\n    <div class=\"hamburger-menu\">\n      <a routerLink=\"/\">Home</a>\n      <a routerLink=\"/users\">Records</a>\n      <a routerLink=\"/add-user\">Add User</a>\n    </div>\n    <div class=\"introductory-text-container\">\n      This application pulls data from the JSONPlaceholder API at\n      <a href=\"https://jsonplaceholder.typicode.com\">https://jsonplaceholder.typicode.com</a>\n    </div>\n    <router-outlet></router-outlet>\n</div>";
+    __webpack_exports__["default"] = "<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html":
+  /*!************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html ***!
+    \************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppFooterFooterComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<footer class=\"footer\">\n    <div class=\"footer-container\">\n      <div class=\"footer-section\">\n        <h3 class=\"footer-section-heading\">Links</h3>\n        <ul>\n          <li><a href=\"https://github.com/bryanc123/Employee-Records-Angular\">Source Code for this App</a></li>\n          <li><a href=\"https://bryanc123.github.io/Personal-Website/\">Personal Portfolio</a></li>\n          <li><a href=\"https://bryanc123.github.io/Plain-JavaScript-Quiz/\">Quiz App</a></li>\n        </ul>\n      </div>\n      <div class=\"footer-section\">\n        <h3 class=\"footer-section-heading\">More Links</h3>\n        <ul>\n          <li>Link 1</li>\n          <li>Link 2</li>\n          <li>Link 3</li>\n          <li>Link 4</li>\n          <li>Link 5</li>\n        </ul>\n      </div>\n      <div class=\"footer-section\">\n        <h3 class=\"footer-section-heading\">Even More Links</h3>\n        <ul>\n          <li>Link 1</li>\n          <li>Link 2</li>\n          <li>Link 3</li>\n        </ul>\n      </div>\n    </div>\n  </footer>\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/header/header.component.html":
+  /*!************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/header/header.component.html ***!
+    \************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppHeaderHeaderComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<header>\n  <div class=\"header-container\">\n    <h1 class=\"header-container__title\"><a href=\"/\">{{title}}</a></h1>\n    <ul class=\"navigation-menu\">\n      <li><a routerLink=\"/\" class=\"navigation-menu-item\">Home</a></li>\n      <li><a routerLink=\"/users\" class=\"navigation-menu-item\">Records</a></li>\n      <li><a routerLink=\"/add-user\" class=\"navigation-menu-item\">Add User</a></li>\n    </ul>\n    <div class=\"hamburger-menu-icon-container\">\n      <a href=\"javascript:void(0);\" class=\"hamburger-menu-icon\" onClick=\"toggleMenu()\">\n        <i class=\"fa fa-bars fa-2x\"></i>\n        <i class=\"fa fa-times fa-2x\"></i>\n      </a>\n    </div>\n  </div>\n</header>\n<div class=\"hamburger-menu\">\n  <a routerLink=\"/\">Home</a>\n  <a routerLink=\"/users\">Records</a>\n  <a routerLink=\"/add-user\">Add User</a>\n</div>\n<div class=\"introductory-text-container\">\n  This application pulls data from the JSONPlaceholder API at\n  <a href=\"https://jsonplaceholder.typicode.com\">https://jsonplaceholder.typicode.com</a>\n</div>\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/user-detail/user-detail.component.html":
+  /*!**********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/user-detail/user-detail.component.html ***!
+    \**********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppUserDetailUserDetailComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"back-button-container\">\n    <a routerLink=\"/users\" class=\"back-button\">Back to User Records</a>\n  </div>\n<section class=\"users\">\n    <div class=\"user-container\">\n        <div class=\"user-record\">\n            <h2 class=\"user-record__name\">{{user.name}}</h2>\n            <div class=\"user-record__avatar-container\">\n                <div class=\"user-record__avatar\"><i class=\"far fa-user-circle fa-5x\"></i></div>\n                <span>Position</span>\n            </div>\n            <div class=\"user-record__details\">\n                <p><span class=\"user-record__field\">Email:</span> {{user.email}}</p>\n                <p><span class=\"user-record__field\">Address:</span> {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}</p>\n                <p><span class=\"user-record__field\">Phone Number:</span> {{user.phone}}</p>\n                <p><span class=\"user-record__field\">Website:</span> {{user.website}}</p>\n                <p><span class=\"user-record__field\">Company:</span> {{user.company.name}}</p>\n                <p><span class=\"user-record__catchphrase\">\"{{user.company.catchPhrase}}\"</span></p>\n                <p><span class=\"user-record__field\">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                Praesent interdum condimentum mauris id condimentum.\n                Nunc egestas sapien quis velit aliquet hendrerit.\n                Integer vitae felis hendrerit, sollicitudin lacus vel, scelerisque dolor.</p>\n            </div>\n        </div>\n    </div>\n</section>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/user-list/user-list.component.html":
+  /*!******************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/user-list/user-list.component.html ***!
+    \******************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppUserListUserListComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"back-button-container\">\n    <a routerLink=\"/\" class=\"back-button\">Back to Home</a>\n</div>\n<section class=\"users\">\n    <div class=\"user-container\">\n        <div class=\"user-record\" *ngFor=\"let user of users\">\n            <div class=\"user-record__avatar-container\">\n                <a routerLink=\"/users/{{user.id}}\">\n                <div class=\"user-record__avatar\">\n                    <i class=\"far fa-user-circle fa-5x\"></i>\n                </div>\n                </a>\n                <span>Position</span>\n            </div>\n            <div class=\"user-record__details\">\n                <h3>\n                    <a routerLink=\"/users/{{user.id}}\">\n                        <span class=\"user-record__name\">{{user.name}}</span>\n                    </a>\n                </h3>\n                <p><span class=\"user-record__field\">Email:</span> {{user.email}}</p>\n                <p><span class=\"user-record__field\">Phone Number:</span> {{user.phone}}</p>\n                <p><span class=\"user-record__field\">Website:</span> {{user.website}}</p>\n                <p><span class=\"user-record__field\">Company:</span> {{user.company.name}}</p>\n                <p><span class=\"user-record__catchphrase\">\"{{user.company.catchPhrase}}\"</span></p>\n            </div>\n        </div>\n    </div>\n</section>";
     /***/
   },
 
@@ -937,7 +1017,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".header-container {\n    background: linear-gradient(orange 10%, 80%, #FFD280 100%);\n    box-shadow: 0px 2px 5px black;\n    display: grid; \n    grid-template-columns: repeat(2, 1fr);\n    margin: 0;\n    padding: 20px;\n}\n\n.site-title {\n    color: black;\n    text-decoration: none;\n}\n\n.navigation-menu {\n    display: flex;\n    justify-self: end;\n    list-style: none;\n}\n\n.navigation-menu-item {\n    border-right: 1px solid black;\n    color: black;\n    padding: 10px 30px;\n    text-decoration: none;\n    transition-duration: 0.2s;\n}\n\n.navigation-menu-item:hover {\n    background-color: #FFD280;\n    cursor: pointer;\n}\n\n.hamburger-menu-icon {\n    color: black;\n    display: none;\n    flex-grow: 1;\n    text-align: right;\n    text-decoration: none;\n}\n\n.fa-times {\n    display: none;\n}\n\n.hamburger-menu {\n    background-color: lightgray;\n    border-top: 1px solid black;\n    display: none;\n    flex-direction: column;\n    padding: 10px 20px;\n}\n\n.hamburger-menu a {\n    color: black;\n    padding: 10px 0;\n    text-decoration: none;\n    transition-duration: 0.2s;\n}\n\n.hamburger-menu a:hover {\n    background-color: #FFD280;\n}\n\n.introductory-text-container {\n    background-color: yellow;\n    padding: 20px;\n}\n\n@media screen and (max-width: 450px){\n    .navigation-menu {\n        display: none;\n    }\n\n    .hamburger-menu-icon {\n        display: block;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwREFBMEQ7SUFDMUQsNkJBQTZCO0lBQzdCLGFBQWE7SUFDYixxQ0FBcUM7SUFDckMsU0FBUztJQUNULGFBQWE7QUFDakI7O0FBRUE7SUFDSSxZQUFZO0lBQ1oscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLGlCQUFpQjtJQUNqQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSw2QkFBNkI7SUFDN0IsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixxQkFBcUI7SUFDckIseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0kseUJBQXlCO0lBQ3pCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLFlBQVk7SUFDWixpQkFBaUI7SUFDakIscUJBQXFCO0FBQ3pCOztBQUNBO0lBQ0ksYUFBYTtBQUNqQjs7QUFDQTtJQUNJLDJCQUEyQjtJQUMzQiwyQkFBMkI7SUFDM0IsYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEI7O0FBQ0E7SUFDSSxZQUFZO0lBQ1osZUFBZTtJQUNmLHFCQUFxQjtJQUNyQix5QkFBeUI7QUFDN0I7O0FBQ0E7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSx3QkFBd0I7SUFDeEIsYUFBYTtBQUNqQjs7QUFFQTtJQUNJO1FBQ0ksYUFBYTtJQUNqQjs7SUFFQTtRQUNJLGNBQWM7SUFDbEI7QUFDSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlci1jb250YWluZXIge1xuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudChvcmFuZ2UgMTAlLCA4MCUsICNGRkQyODAgMTAwJSk7XG4gICAgYm94LXNoYWRvdzogMHB4IDJweCA1cHggYmxhY2s7XG4gICAgZGlzcGxheTogZ3JpZDsgXG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMiwgMWZyKTtcbiAgICBtYXJnaW46IDA7XG4gICAgcGFkZGluZzogMjBweDtcbn1cblxuLnNpdGUtdGl0bGUge1xuICAgIGNvbG9yOiBibGFjaztcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbi5uYXZpZ2F0aW9uLW1lbnUge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1zZWxmOiBlbmQ7XG4gICAgbGlzdC1zdHlsZTogbm9uZTtcbn1cblxuLm5hdmlnYXRpb24tbWVudS1pdGVtIHtcbiAgICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCBibGFjaztcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgcGFkZGluZzogMTBweCAzMHB4O1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICB0cmFuc2l0aW9uLWR1cmF0aW9uOiAwLjJzO1xufVxuXG4ubmF2aWdhdGlvbi1tZW51LWl0ZW06aG92ZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkQyODA7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uaGFtYnVyZ2VyLW1lbnUtaWNvbiB7XG4gICAgY29sb3I6IGJsYWNrO1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgZmxleC1ncm93OiAxO1xuICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cbi5mYS10aW1lcyB7XG4gICAgZGlzcGxheTogbm9uZTtcbn1cbi5oYW1idXJnZXItbWVudSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRncmF5O1xuICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCBibGFjaztcbiAgICBkaXNwbGF5OiBub25lO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgcGFkZGluZzogMTBweCAyMHB4O1xufVxuLmhhbWJ1cmdlci1tZW51IGEge1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBwYWRkaW5nOiAxMHB4IDA7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgIHRyYW5zaXRpb24tZHVyYXRpb246IDAuMnM7XG59XG4uaGFtYnVyZ2VyLW1lbnUgYTpob3ZlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0ZGRDI4MDtcbn1cblxuLmludHJvZHVjdG9yeS10ZXh0LWNvbnRhaW5lciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xuICAgIHBhZGRpbmc6IDIwcHg7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ1MHB4KXtcbiAgICAubmF2aWdhdGlvbi1tZW51IHtcbiAgICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG5cbiAgICAuaGFtYnVyZ2VyLW1lbnUtaWNvbiB7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cbn0iXX0= */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
@@ -1085,17 +1165,185 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _add_user_add_user_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./add-user/add-user.component */
     "./src/app/add-user/add-user.component.ts");
+    /* harmony import */
+
+
+    var _header_header_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ./header/header.component */
+    "./src/app/header/header.component.ts");
+    /* harmony import */
+
+
+    var _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./footer/footer.component */
+    "./src/app/footer/footer.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_7__["UserListComponent"], _user_detail_user_detail_component__WEBPACK_IMPORTED_MODULE_8__["UserDetailComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _add_user_add_user_component__WEBPACK_IMPORTED_MODULE_10__["AddUserComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _user_list_user_list_component__WEBPACK_IMPORTED_MODULE_7__["UserListComponent"], _user_detail_user_detail_component__WEBPACK_IMPORTED_MODULE_8__["UserDetailComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _add_user_add_user_component__WEBPACK_IMPORTED_MODULE_10__["AddUserComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_11__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"]],
       providers: [],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })], AppModule);
+    /***/
+  },
+
+  /***/
+  "./src/app/footer/footer.component.css":
+  /*!*********************************************!*\
+    !*** ./src/app/footer/footer.component.css ***!
+    \*********************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppFooterFooterComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".footer {\n    background-color: orange;\n    flex-shrink: 0;\n    padding: 20px;\n}\n\n.footer-container {\n    display: grid;\n    grid-template-columns: 3fr 2fr 2fr;\n    max-width: 900px;\n}\n\n.footer-section-heading {\n    margin-bottom: 10px;\n    text-decoration: underline;\n}\n\n.footer-section ul {\n    list-style: none;\n}\n\n.footer-section ul li {\n    margin-bottom: 10px;\n}\n\n.footer-section ul li a {\n    color: black;\n    text-decoration: none;\n}\n\n.footer-section ul li a:hover {\n    color: rgba(0, 0, 0, 0.8);\n}\n\n@media screen and (max-width: 600px) {\n    .footer-container {\n        grid-template-columns: 1fr;\n    }\n    .footer-section {\n        margin-bottom: 20px;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLGNBQWM7SUFDZCxhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLGtDQUFrQztJQUNsQyxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIsMEJBQTBCO0FBQzlCOztBQUVBO0lBQ0ksZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLHFCQUFxQjtBQUN6Qjs7QUFDQTtJQUNJLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJO1FBQ0ksMEJBQTBCO0lBQzlCO0lBQ0E7UUFDSSxtQkFBbUI7SUFDdkI7QUFDSiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6IG9yYW5nZTtcbiAgICBmbGV4LXNocmluazogMDtcbiAgICBwYWRkaW5nOiAyMHB4O1xufVxuXG4uZm9vdGVyLWNvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDNmciAyZnIgMmZyO1xuICAgIG1heC13aWR0aDogOTAwcHg7XG59XG5cbi5mb290ZXItc2VjdGlvbi1oZWFkaW5nIHtcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuXG4uZm9vdGVyLXNlY3Rpb24gdWwge1xuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG59XG5cbi5mb290ZXItc2VjdGlvbiB1bCBsaSB7XG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLmZvb3Rlci1zZWN0aW9uIHVsIGxpIGEge1xuICAgIGNvbG9yOiBibGFjaztcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG4uZm9vdGVyLXNlY3Rpb24gdWwgbGkgYTpob3ZlciB7XG4gICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44KTtcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICAuZm9vdGVyLWNvbnRhaW5lciB7XG4gICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyO1xuICAgIH1cbiAgICAuZm9vdGVyLXNlY3Rpb24ge1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICAgIH1cbn0iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/footer/footer.component.ts":
+  /*!********************************************!*\
+    !*** ./src/app/footer/footer.component.ts ***!
+    \********************************************/
+
+  /*! exports provided: FooterComponent */
+
+  /***/
+  function srcAppFooterFooterComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FooterComponent", function () {
+      return FooterComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var FooterComponent = /*#__PURE__*/function () {
+      function FooterComponent() {
+        _classCallCheck(this, FooterComponent);
+      }
+
+      _createClass(FooterComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return FooterComponent;
+    }();
+
+    FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-footer',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./footer.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./footer.component.css */
+      "./src/app/footer/footer.component.css"))["default"]]
+    })], FooterComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/header/header.component.css":
+  /*!*********************************************!*\
+    !*** ./src/app/header/header.component.css ***!
+    \*********************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppHeaderHeaderComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".header-container {\n    background: linear-gradient(orange 10%, 80%, #FFD280 100%);\n    display: grid; \n    grid-template-columns: repeat(2, 1fr);\n    margin: 0;\n    padding: 20px;\n}\n\n.header-container__title a {\n    color: black;\n    text-decoration: none;\n}\n\n.navigation-menu {\n    display: flex;\n    justify-self: end;\n    list-style: none;\n}\n\n.navigation-menu-item {\n    border-right: 1px solid black;\n    color: black;\n    padding: 10px 30px;\n    text-decoration: none;\n    transition-duration: 0.2s;\n}\n\n.navigation-menu-item:hover {\n    background-color: #FFD280;\n    cursor: pointer;\n}\n\n.hamburger-menu-icon {\n    color: black;\n    display: none;\n    flex-grow: 1;\n    text-align: right;\n    text-decoration: none;\n}\n\n.fa-times {\n    display: none;\n}\n\n/* Hamburger Menu */\n\n.hamburger-menu {\n    background-color: orange;\n    display: none;\n    flex-direction: column;\n}\n\n.hamburger-menu a {\n    border-bottom: 1px solid #FFD280;\n    color: black;\n    padding: 10px 20px;\n    text-decoration: none;\n    transition-duration: 0.2s;\n}\n\n.hamburger-menu a:hover {\n    background-color: #FFD280;\n}\n\n.introductory-text-container {\n    background-color: yellow;\n    padding: 20px;\n}\n\n@media screen and (max-width: 450px){\n    .header-container {\n        display: flex;\n    }\n\n    .header-container__title {\n        flex-grow: 1;\n        font-size: 24px;\n    }\n\n    .navigation-menu {\n        display: none;\n    }\n\n    .hamburger-menu-icon {\n        display: block;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksMERBQTBEO0lBQzFELGFBQWE7SUFDYixxQ0FBcUM7SUFDckMsU0FBUztJQUNULGFBQWE7QUFDakI7O0FBRUE7SUFDSSxZQUFZO0lBQ1oscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLGlCQUFpQjtJQUNqQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSw2QkFBNkI7SUFDN0IsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixxQkFBcUI7SUFDckIseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0kseUJBQXlCO0lBQ3pCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLFlBQVk7SUFDWixpQkFBaUI7SUFDakIscUJBQXFCO0FBQ3pCOztBQUNBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQSxtQkFBbUI7O0FBRW5CO0lBQ0ksd0JBQXdCO0lBQ3hCLGFBQWE7SUFDYixzQkFBc0I7QUFDMUI7O0FBQ0E7SUFDSSxnQ0FBZ0M7SUFDaEMsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixxQkFBcUI7SUFDckIseUJBQXlCO0FBQzdCOztBQUNBO0lBQ0kseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksd0JBQXdCO0lBQ3hCLGFBQWE7QUFDakI7O0FBRUE7SUFDSTtRQUNJLGFBQWE7SUFDakI7O0lBRUE7UUFDSSxZQUFZO1FBQ1osZUFBZTtJQUNuQjs7SUFFQTtRQUNJLGFBQWE7SUFDakI7O0lBRUE7UUFDSSxjQUFjO0lBQ2xCO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZGVyLWNvbnRhaW5lciB7XG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KG9yYW5nZSAxMCUsIDgwJSwgI0ZGRDI4MCAxMDAlKTtcbiAgICBkaXNwbGF5OiBncmlkOyBcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xuICAgIG1hcmdpbjogMDtcbiAgICBwYWRkaW5nOiAyMHB4O1xufVxuXG4uaGVhZGVyLWNvbnRhaW5lcl9fdGl0bGUgYSB7XG4gICAgY29sb3I6IGJsYWNrO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuLm5hdmlnYXRpb24tbWVudSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LXNlbGY6IGVuZDtcbiAgICBsaXN0LXN0eWxlOiBub25lO1xufVxuXG4ubmF2aWdhdGlvbi1tZW51LWl0ZW0ge1xuICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkIGJsYWNrO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBwYWRkaW5nOiAxMHB4IDMwcHg7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgIHRyYW5zaXRpb24tZHVyYXRpb246IDAuMnM7XG59XG5cbi5uYXZpZ2F0aW9uLW1lbnUtaXRlbTpob3ZlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0ZGRDI4MDtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5oYW1idXJnZXItbWVudS1pY29uIHtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgICBmbGV4LWdyb3c6IDE7XG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuLmZhLXRpbWVzIHtcbiAgICBkaXNwbGF5OiBub25lO1xufVxuXG4vKiBIYW1idXJnZXIgTWVudSAqL1xuXG4uaGFtYnVyZ2VyLW1lbnUge1xuICAgIGJhY2tncm91bmQtY29sb3I6IG9yYW5nZTtcbiAgICBkaXNwbGF5OiBub25lO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG4uaGFtYnVyZ2VyLW1lbnUgYSB7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNGRkQyODA7XG4gICAgY29sb3I6IGJsYWNrO1xuICAgIHBhZGRpbmc6IDEwcHggMjBweDtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgdHJhbnNpdGlvbi1kdXJhdGlvbjogMC4ycztcbn1cbi5oYW1idXJnZXItbWVudSBhOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZEMjgwO1xufVxuXG4uaW50cm9kdWN0b3J5LXRleHQtY29udGFpbmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gICAgcGFkZGluZzogMjBweDtcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNDUwcHgpe1xuICAgIC5oZWFkZXItY29udGFpbmVyIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICB9XG5cbiAgICAuaGVhZGVyLWNvbnRhaW5lcl9fdGl0bGUge1xuICAgICAgICBmbGV4LWdyb3c6IDE7XG4gICAgICAgIGZvbnQtc2l6ZTogMjRweDtcbiAgICB9XG5cbiAgICAubmF2aWdhdGlvbi1tZW51IHtcbiAgICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG5cbiAgICAuaGFtYnVyZ2VyLW1lbnUtaWNvbiB7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cbn0iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/header/header.component.ts":
+  /*!********************************************!*\
+    !*** ./src/app/header/header.component.ts ***!
+    \********************************************/
+
+  /*! exports provided: HeaderComponent */
+
+  /***/
+  function srcAppHeaderHeaderComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HeaderComponent", function () {
+      return HeaderComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var HeaderComponent = /*#__PURE__*/function () {
+      function HeaderComponent() {
+        _classCallCheck(this, HeaderComponent);
+
+        this.title = "Employee Records";
+      }
+
+      _createClass(HeaderComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return HeaderComponent;
+    }();
+
+    HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-header',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./header.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/header/header.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./header.component.css */
+      "./src/app/header/header.component.css"))["default"]]
+    })], HeaderComponent);
     /***/
   },
 
@@ -1149,6 +1397,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       template: "\n    <div class=\"wrapper\">\n      <div class=\"menu-item-container\">\n        <p>\n          View employee records which include name, email, phone number, website, and company\n        </p>\n        <div class=\"button-container\">\n          <button routerLink=\"/users\" class=\"user-records-button\">User Records</button>\n        </div>\n      </div>\n      <div class=\"menu-item-container\">\n        <p>\n          Add an employee record to the database\n        </p>\n        <div class=\"button-container\">\n          <button routerLink=\"/add-user\" class=\"add-user-button\">Add User</button>\n        </div>\n      </div>\n    </div>\n  ",
       styles: [".wrapper { display: flex; flex-direction: column; margin: auto; max-width: 800px; padding: 20px }", ".menu-item-container { background-color: #D8D8D8; border-left: 10px solid orange; margin-bottom: 40px; padding: 20px }", ".menu-item-container p { margin-bottom: 20px }", "button { background-color: orange; border: none; border-radius: 20px; font-size: 24px; font-weight: bold; padding: 20px; transition-duration: 0.2s", "button:hover { background-color: #FFD280; cursor: pointer }"]
     })], HomeComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/user-detail/user-detail.component.css":
+  /*!*******************************************************!*\
+    !*** ./src/app/user-detail/user-detail.component.css ***!
+    \*******************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppUserDetailUserDetailComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".user-container {\n    background-color: #FFEDCC;\n}\n\n.back-button-container {\n    margin: 20px;\n}\n\n.back-button {\n    background-color: orange;\n    border-radius: 10px;\n    color: black;\n    padding: 10px;\n    text-decoration: none;\n    transition-duration: 0.2s;\n}\n\n.back-button:hover {\n    background-color: #FFD280;\n}\n\n/* User Record */\n\n.user-container {\n    background-color: white\n}\n\n.user-record {\n    display: flex;\n    padding: 20px;\n}\n\n.user-record:nth-child(odd) {\n    background-color: #FFEDCC\n}\n\n.user-record__name { \n    margin-bottom: 10px;\n    text-align: center;\n}\n\n.user-record__avatar-container {\n    text-align: center;\n}\n\n.user-record__avatar-container a {\n    color: black;\n    text-decoration: none;\n}\n\n.user-record__avatar {\n    background-color: yellow;\n    padding: 20px;\n}\n\n.user-record__details {\n    line-height: 30px;\n    margin-left: 20px;\n}\n\n.user-record__field {\n    font-weight: bold;\n}\n\n.user-record__catchphrase {\n    font-style: italic;\n}\n\n@media screen and (max-width: 600px) {\n    .user-record {\n        flex-direction: column;\n    }\n\n    .user-record__avatar-container {\n        margin-bottom: 20px;\n    }\n\n    .user-record__avatar {\n        width: 200px;\n        height: 200px;\n        margin: 0 auto;\n    }\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXNlci1kZXRhaWwvdXNlci1kZXRhaWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSx3QkFBd0I7SUFDeEIsbUJBQW1CO0lBQ25CLFlBQVk7SUFDWixhQUFhO0lBQ2IscUJBQXFCO0lBQ3JCLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJLHlCQUF5QjtBQUM3Qjs7QUFFQSxnQkFBZ0I7O0FBRWhCO0lBQ0k7QUFDSjs7QUFFQTtJQUNJLGFBQWE7SUFDYixhQUFhO0FBQ2pCOztBQUNBO0lBQ0k7QUFDSjs7QUFFQTtJQUNJLG1CQUFtQjtJQUNuQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBQ0E7SUFDSSxZQUFZO0lBQ1oscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksd0JBQXdCO0lBQ3hCLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0k7UUFDSSxzQkFBc0I7SUFDMUI7O0lBRUE7UUFDSSxtQkFBbUI7SUFDdkI7O0lBRUE7UUFDSSxZQUFZO1FBQ1osYUFBYTtRQUNiLGNBQWM7SUFDbEI7QUFDSiIsImZpbGUiOiJzcmMvYXBwL3VzZXItZGV0YWlsL3VzZXItZGV0YWlsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudXNlci1jb250YWluZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkVEQ0M7XG59XG5cbi5iYWNrLWJ1dHRvbi1jb250YWluZXIge1xuICAgIG1hcmdpbjogMjBweDtcbn1cblxuLmJhY2stYnV0dG9uIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBvcmFuZ2U7XG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgcGFkZGluZzogMTBweDtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgdHJhbnNpdGlvbi1kdXJhdGlvbjogMC4ycztcbn1cblxuLmJhY2stYnV0dG9uOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZEMjgwO1xufVxuXG4vKiBVc2VyIFJlY29yZCAqL1xuXG4udXNlci1jb250YWluZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlXG59XG5cbi51c2VyLXJlY29yZCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBwYWRkaW5nOiAyMHB4O1xufVxuLnVzZXItcmVjb3JkOm50aC1jaGlsZChvZGQpIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZFRENDXG59XG5cbi51c2VyLXJlY29yZF9fbmFtZSB7IFxuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4udXNlci1yZWNvcmRfX2F2YXRhci1jb250YWluZXIge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi51c2VyLXJlY29yZF9fYXZhdGFyLWNvbnRhaW5lciBhIHtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4udXNlci1yZWNvcmRfX2F2YXRhciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xuICAgIHBhZGRpbmc6IDIwcHg7XG59XG5cbi51c2VyLXJlY29yZF9fZGV0YWlscyB7XG4gICAgbGluZS1oZWlnaHQ6IDMwcHg7XG4gICAgbWFyZ2luLWxlZnQ6IDIwcHg7XG59XG5cbi51c2VyLXJlY29yZF9fZmllbGQge1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4udXNlci1yZWNvcmRfX2NhdGNocGhyYXNlIHtcbiAgICBmb250LXN0eWxlOiBpdGFsaWM7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XG4gICAgLnVzZXItcmVjb3JkIHtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICB9XG5cbiAgICAudXNlci1yZWNvcmRfX2F2YXRhci1jb250YWluZXIge1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICAgIH1cblxuICAgIC51c2VyLXJlY29yZF9fYXZhdGFyIHtcbiAgICAgICAgd2lkdGg6IDIwMHB4O1xuICAgICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgICBtYXJnaW46IDAgYXV0bztcbiAgICB9XG59XG4iXX0= */";
     /***/
   },
 
@@ -1245,9 +1513,33 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     UserDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-user',
-      template: "\n    <div class=\"back-button-container\">\n      <a routerLink=\"/users\" class=\"back-button\">Back to User Records</a>\n    </div>\n    <section class=\"users\">\n      <div class=\"user-container\">\n        <div class=\"user-record-container\">\n          <div class=\"user-avatar-container\">\n            <div class=\"user-avatar\"><i class=\"far fa-user-circle fa-5x\"></i></div>\n            <span>Position</span>\n          </div>\n          <div class=\"user-details-container\">\n            <h3><span class=\"user-name\">{{user.name}}</span></h3>\n            <p>Email: {{user.email}}</p>\n            <p>Address: {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}</p>\n            <p>Phone Number: {{user.phone}}</p>\n            <p>Website: {{user.website}}</p>\n            <p>Company: {{user.company.name}}</p>\n            <p><span class=\"catchphrase\">\"{{user.company.catchPhrase}}\"</span></p>\n            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n            Praesent interdum condimentum mauris id condimentum.\n            Nunc egestas sapien quis velit aliquet hendrerit.\n            Integer vitae felis hendrerit, sollicitudin lacus vel, scelerisque dolor.</p>\n          </div>\n        </div>\n      </div>\n    </section>\n  ",
-      styles: [".user-container { background-color: #FFEDCC }", ".back-button-container { margin: 20px }", ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none; transition-duration: 0.2s }", ".back-button:hover { background-color: #FFD280 }", ".user-record-container { display: flex; padding: 20px }", ".user-avatar-container { text-align:center }", ".user-avatar { background-color: yellow; padding: 20px }", ".user-details-container { line-height: 30px; margin-left: 20px }", ".user-name { text-decoration: underline; }", ".catchphrase { font-style: italic }"]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./user-detail.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/user-detail/user-detail.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./user-detail.component.css */
+      "./src/app/user-detail/user-detail.component.css"))["default"]]
     })], UserDetailComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/user-list/user-list.component.css":
+  /*!***************************************************!*\
+    !*** ./src/app/user-list/user-list.component.css ***!
+    \***************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppUserListUserListComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".back-button-container {\n    margin: 20px\n}\n\n.back-button {\n    background-color: orange;\n    border-radius: 10px;\n    color:black;\n    padding: 10px;\n    text-decoration: none;\n    transition-duration: 0.2s\n}\n\n.back-button:hover {\n    background-color: #FFD280\n}\n\n/* Users Container */\n\n.user-container {\n    background-color: white\n}\n\n.user-record {\n    display: flex;\n    padding: 20px;\n}\n\n.user-record:nth-child(odd) {\n    background-color: #FFEDCC\n}\n\n.user-record__avatar-container {\n    text-align: center;\n}\n\n.user-record__avatar-container a {\n    color: black;\n    text-decoration: none;\n}\n\n.user-record__avatar {\n    background-color: yellow;\n    padding: 20px;\n}\n\n.user-record__details {\n    line-height: 30px;\n    margin-left: 20px;\n}\n\n.user-record__name { \n    text-decoration: underline;\n}\n\n.user-record__field {\n    font-weight: bold;\n}\n\n.user-record__catchphrase {\n    font-style: italic;\n}\n\n@media screen and (max-width: 600px) {\n    .user-record {\n        flex-direction: column;\n    }\n\n    .user-record__avatar-container {\n        margin-bottom: 20px;\n    }\n\n    .user-record__avatar {\n        width: 200px;\n        height: 200px;\n        margin: 0 auto;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXNlci1saXN0L3VzZXItbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0k7QUFDSjs7QUFFQTtJQUNJLHdCQUF3QjtJQUN4QixtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGFBQWE7SUFDYixxQkFBcUI7SUFDckI7QUFDSjs7QUFDQTtJQUNJO0FBQ0o7O0FBRUEsb0JBQW9COztBQUVwQjtJQUNJO0FBQ0o7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsYUFBYTtBQUNqQjs7QUFDQTtJQUNJO0FBQ0o7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBQ0E7SUFDSSxZQUFZO0lBQ1oscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksd0JBQXdCO0lBQ3hCLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksMEJBQTBCO0FBQzlCOztBQUVBO0lBQ0ksaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0k7UUFDSSxzQkFBc0I7SUFDMUI7O0lBRUE7UUFDSSxtQkFBbUI7SUFDdkI7O0lBRUE7UUFDSSxZQUFZO1FBQ1osYUFBYTtRQUNiLGNBQWM7SUFDbEI7QUFDSiIsImZpbGUiOiJzcmMvYXBwL3VzZXItbGlzdC91c2VyLWxpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iYWNrLWJ1dHRvbi1jb250YWluZXIge1xuICAgIG1hcmdpbjogMjBweFxufVxuXG4uYmFjay1idXR0b24ge1xuICAgIGJhY2tncm91bmQtY29sb3I6IG9yYW5nZTtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIGNvbG9yOmJsYWNrO1xuICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgIHRyYW5zaXRpb24tZHVyYXRpb246IDAuMnNcbn1cbi5iYWNrLWJ1dHRvbjpob3ZlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0ZGRDI4MFxufVxuXG4vKiBVc2VycyBDb250YWluZXIgKi9cblxuLnVzZXItY29udGFpbmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZVxufVxuXG4udXNlci1yZWNvcmQge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgcGFkZGluZzogMjBweDtcbn1cbi51c2VyLXJlY29yZDpudGgtY2hpbGQob2RkKSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0ZGRURDQ1xufVxuXG4udXNlci1yZWNvcmRfX2F2YXRhci1jb250YWluZXIge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi51c2VyLXJlY29yZF9fYXZhdGFyLWNvbnRhaW5lciBhIHtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4udXNlci1yZWNvcmRfX2F2YXRhciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xuICAgIHBhZGRpbmc6IDIwcHg7XG59XG5cbi51c2VyLXJlY29yZF9fZGV0YWlscyB7XG4gICAgbGluZS1oZWlnaHQ6IDMwcHg7XG4gICAgbWFyZ2luLWxlZnQ6IDIwcHg7XG59XG5cbi51c2VyLXJlY29yZF9fbmFtZSB7IFxuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufVxuXG4udXNlci1yZWNvcmRfX2ZpZWxkIHtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLnVzZXItcmVjb3JkX19jYXRjaHBocmFzZSB7XG4gICAgZm9udC1zdHlsZTogaXRhbGljO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIC51c2VyLXJlY29yZCB7XG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgfVxuXG4gICAgLnVzZXItcmVjb3JkX19hdmF0YXItY29udGFpbmVyIHtcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgICB9XG5cbiAgICAudXNlci1yZWNvcmRfX2F2YXRhciB7XG4gICAgICAgIHdpZHRoOiAyMDBweDtcbiAgICAgICAgaGVpZ2h0OiAyMDBweDtcbiAgICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgfVxufSJdfQ== */";
     /***/
   },
 
@@ -1325,8 +1617,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     UserListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-user-list',
-      template: "\n    <div class=\"back-button-container\">\n      <a routerLink=\"/\" class=\"back-button\">Back to Home</a>\n    </div>\n    <section class=\"users\">\n      <div class=\"user-container\">\n        <div class=\"user-record-container\" *ngFor=\"let user of users\">\n          <div class=\"user-avatar-container\">\n            <a routerLink=\"/users/{{user.id}}\">\n              <div class=\"user-avatar\"><i class=\"far fa-user-circle fa-5x\"></i></div>\n            </a>\n            <span>Position</span>\n          </div>\n          <div class=\"user-details-container\">\n            <h3><a routerLink=\"/users/{{user.id}}\"><span class=\"user-name\">{{user.name}}</span></a></h3>\n            <p>Email: {{user.email}}</p>\n            <p>Phone Number: {{user.phone}}</p>\n            <p>Website: {{user.website}}</p>\n            <p>Company: {{user.company.name}}</p>\n            <p><span class=\"catchphrase\">\"{{user.company.catchPhrase}}\"</span></p>\n          </div>\n        </div>\n      </div>\n    </section>\n  ",
-      styles: [".back-button-container { margin: 20px }", ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none; transition-duration: 0.2s }", ".back-button:hover { background-color: #FFD280 }", ".user-container { background-color: white }", ".user-record-container:nth-child(odd) { background-color: #FFEDCC }", ".user-record-container { display: flex; padding: 20px}", ".user-avatar-container { text-align:center }", ".user-avatar-container a { color: black; text-decoration: none }", ".user-avatar { background-color: yellow; padding: 20px }", ".user-details-container { line-height: 30px; margin-left: 20px }", ".user-name { text-decoration: underline; }", ".catchphrase { font-style: italic }"]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./user-list.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/user-list/user-list.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./user-list.component.css */
+      "./src/app/user-list/user-list.component.css"))["default"]]
     })], UserListComponent);
     /***/
   },

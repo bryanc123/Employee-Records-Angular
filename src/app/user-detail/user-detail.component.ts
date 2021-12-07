@@ -7,46 +7,8 @@ import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user',
-  template: `
-    <div class="back-button-container">
-      <a routerLink="/users" class="back-button">Back to User Records</a>
-    </div>
-    <section class="users">
-      <div class="user-container">
-        <div class="user-record-container">
-          <div class="user-avatar-container">
-            <div class="user-avatar"><i class="far fa-user-circle fa-5x"></i></div>
-            <span>Position</span>
-          </div>
-          <div class="user-details-container">
-            <h3><span class="user-name">{{user.name}}</span></h3>
-            <p>Email: {{user.email}}</p>
-            <p>Address: {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}</p>
-            <p>Phone Number: {{user.phone}}</p>
-            <p>Website: {{user.website}}</p>
-            <p>Company: {{user.company.name}}</p>
-            <p><span class="catchphrase">"{{user.company.catchPhrase}}"</span></p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Praesent interdum condimentum mauris id condimentum.
-            Nunc egestas sapien quis velit aliquet hendrerit.
-            Integer vitae felis hendrerit, sollicitudin lacus vel, scelerisque dolor.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  `,
-  styles: [
-    ".user-container { background-color: #FFEDCC }",
-    ".back-button-container { margin: 20px }",
-    ".back-button { background-color: orange; border-radius: 10px; color: black; padding: 10px; text-decoration: none; transition-duration: 0.2s }",
-    ".back-button:hover { background-color: #FFD280 }",
-    ".user-record-container { display: flex; padding: 20px }",
-    ".user-avatar-container { text-align:center }",
-    ".user-avatar { background-color: yellow; padding: 20px }",
-    ".user-details-container { line-height: 30px; margin-left: 20px }",
-    ".user-name { text-decoration: underline; }",
-    ".catchphrase { font-style: italic }"
-  ]
+  templateUrl: './user-detail.component.html',
+  styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
   public userId;

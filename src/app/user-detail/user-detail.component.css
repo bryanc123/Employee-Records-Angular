@@ -1,0 +1,81 @@
+.user-container {
+    background-color: #FFEDCC;
+}
+
+.back-button-container {
+    margin: 20px;
+}
+
+.back-button {
+    background-color: orange;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.back-button:hover {
+    background-color: #FFD280;
+}
+
+/* User Record */
+
+.user-container {
+    background-color: white
+}
+
+.user-record {
+    display: flex;
+    padding: 20px;
+}
+.user-record:nth-child(odd) {
+    background-color: #FFEDCC
+}
+
+.user-record__name { 
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.user-record__avatar-container {
+    text-align: center;
+}
+.user-record__avatar-container a {
+    color: black;
+    text-decoration: none;
+}
+
+.user-record__avatar {
+    background-color: yellow;
+    padding: 20px;
+}
+
+.user-record__details {
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+.user-record__field {
+    font-weight: bold;
+}
+
+.user-record__catchphrase {
+    font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+    .user-record {
+        flex-direction: column;
+    }
+
+    .user-record__avatar-container {
+        margin-bottom: 20px;
+    }
+
+    .user-record__avatar {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+}
