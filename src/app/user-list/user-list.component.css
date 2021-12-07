@@ -1,5 +1,5 @@
 .back-button-container {
-    margin: 20px
+    margin: 20px;
 }
 
 .back-button {
@@ -8,16 +8,16 @@
     color:black;
     padding: 10px;
     text-decoration: none;
-    transition-duration: 0.2s
+    transition-duration: 0.2s;
 }
 .back-button:hover {
-    background-color: #FFD280
+    background-color: #FFD280;
 }
 
 /* Users Container */
 
 .user-container {
-    background-color: white
+    background-color: white;
 }
 
 .user-record {

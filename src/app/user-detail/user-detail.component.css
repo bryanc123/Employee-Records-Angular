@@ -21,16 +21,18 @@
 
 /* User Record */
 
+.user-heading {
+    padding: 10px;
+}
+
 .user-container {
     background-color: white
 }
 
 .user-record {
+    background-color: #FFEDCC;
     display: flex;
     padding: 20px;
-}
-.user-record:nth-child(odd) {
-    background-color: #FFEDCC
 }
 
 .user-record__name { 
@@ -65,6 +67,10 @@
 }
 
 @media screen and (max-width: 600px) {
+    .user-heading {
+        text-align: center;
+    }
+
     .user-record {
         flex-direction: column;
     }
