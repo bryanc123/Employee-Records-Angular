@@ -51,7 +51,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"back-button-container\">\n    <a routerLink=\"/\" class=\"back-button\">Back to Home</a>\n</div>\n<div class=\"formContainer\">\n    <h2>Add Employee Record</h2>\n    <form id=\"userForm\" [formGroup]=\"userForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"formGroup\">\n            <label>\n                <p>Name:</p>\n                <input type=\"text\" formControlName=\"name\" [class.invalid-input]=\"name.invalid && (name.dirty || name.touched)\">\n            </label>\n            <div *ngIf=\"name.invalid && (name.dirty || name.touched)\" class=\"alert\">\n                <div *ngIf=\"name.errors?.required\">\n                    Name is required\n                </div>\n            </div>\n            <label>\n                <p>Username:</p>\n                <input type=\"text\" formControlName=\"username\">\n            </label>\n            <label>\n                <p>Email:</p>\n                <input type=\"text\" formControlName=\"email\" [class.invalid-input]=\"email.invalid && (email.dirty || email.touched)\">\n            </label>\n            <div *ngIf=\"email.invalid && (email.dirty || email.touched)\" class=\"alert\">\n                <div *ngIf=\"email.errors?.email\">\n                    Email is invalid\n                </div>\n            </div>\n        </div>\n        <div class=\"formGroup\" formGroupName=\"address\">\n            <h3>Address</h3>\n            <label>\n                <p>Street:</p>\n                <input type=\"text\" formControlName=\"street\">\n            </label>\n            <label>\n                <p>Suite:</p>\n                <input type=\"text\" formControlName=\"suite\">\n            </label>\n            <label>\n                <p>City:</p>\n                <input type=\"text\" formControlName=\"city\">\n            </label>\n            <label>\n                <p>ZIP Code:</p>\n                <input type=\"text\" formControlName=\"zipcode\">\n            </label>\n            <label>\n                <p>Latitude:</p>\n                <input type=\"text\" formControlName=\"lat\">\n            </label>\n            <label>\n                <p>Longitude:</p>\n                <input type=\"text\" formControlName=\"lng\">\n            </label>\n        </div>\n        <div class=\"formGroup\">\n            <label>\n                Phone Number:\n                <input type=\"text\" formControlName=\"phone\">\n            </label>\n            <label>\n                Website:\n                <input type=\"text\" formControlName=\"website\">\n            </label>\n        </div>\n        <div class=\"formGroup\" formGroupName=\"company\">\n            <h3>Company</h3>\n            <label>\n                Name:\n                <input type=\"text\" formControlName=\"name\">\n            </label>\n            <label>\n                Catchphrase:\n                <input type=\"text\" formControlName=\"catchPhrase\">\n            </label>\n            <label>\n                <p>BS:</p>\n                <input type=\"text\" formControlName=\"bs\">\n            </label>\n        </div>\n        <button type=\"submit\" class=\"submit-button\" [disabled]=\"userForm.invalid\">Submit</button>\n    </form>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"back-button-container\">\n    <a routerLink=\"/\" class=\"back-button\">Back to Home</a>\n</div>\n<div class=\"formContainer\">\n    <h2>Add Employee Record</h2>\n    <form id=\"userForm\" [formGroup]=\"userForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"formGroup\">\n            <label>\n                <p>Name:</p>\n                <input type=\"text\" formControlName=\"name\" [class.invalid-input]=\"name.invalid && (name.dirty || name.touched)\">\n            </label>\n            <div *ngIf=\"name.invalid && (name.dirty || name.touched)\" class=\"alert\">\n                <div *ngIf=\"name.errors?.required\">\n                    Name is required\n                </div>\n                <div *ngIf=\"name.errors?.pattern\">\n                    Name must contain letters or spaces only\n                </div>\n            </div>\n            <label>\n                <p>Username:</p>\n                <input type=\"text\" formControlName=\"username\">\n            </label>\n            <div *ngIf=\"username.invalid && (username.dirty || username.touched)\" class=\"alert\">\n                <div *ngIf=\"username.errors?.required\">\n                    Username is required\n                </div>\n            </div>\n            <label>\n                <p>Email:</p>\n                <input type=\"text\" formControlName=\"email\" [class.invalid-input]=\"email.invalid && (email.dirty || email.touched)\">\n            </label>\n            <div *ngIf=\"email.invalid && (email.dirty || email.touched)\" class=\"alert\">\n                <div *ngIf=\"email.errors?.email\">\n                    Email is invalid\n                </div>\n            </div>\n        </div>\n        <div class=\"formGroup\" formGroupName=\"address\">\n            <h3>Address</h3>\n            <label>\n                <p>Street:</p>\n                <input type=\"text\" formControlName=\"street\">\n            </label>\n            <div *ngIf=\"street.invalid && (street.dirty || street.touched)\" class=\"alert\">\n                <div *ngIf=\"street.errors?.required\">\n                    Street is required\n                </div>\n            </div>\n            <label>\n                <p>Suite:</p>\n                <input type=\"text\" formControlName=\"suite\">\n            </label>\n            <div *ngIf=\"suite.invalid && (suite.dirty || suite.touched)\" class=\"alert\">\n                <div *ngIf=\"suite.errors?.required\">\n                    Suite is required\n                </div>\n            </div>\n            <label>\n                <p>City:</p>\n                <input type=\"text\" formControlName=\"city\">\n            </label>\n            <div *ngIf=\"city.invalid && (city.dirty || city.touched)\" class=\"alert\">\n                <div *ngIf=\"city.errors?.required\">\n                    City is required\n                </div>\n            </div>\n            <label>\n                <p>ZIP Code:</p>\n                <input type=\"text\" formControlName=\"zipcode\">\n            </label>\n            <div *ngIf=\"zipcode.invalid && (zipcode.dirty || zipcode.touched)\" class=\"alert\">\n                <div *ngIf=\"zipcode.errors?.required\">\n                    ZIP Code is required\n                </div>\n                <div *ngIf=\"zipcode.errors?.pattern\">\n                    ZIP Code format must be XXXXX or XXXXX-XXXX (each X is an integer)\n                </div>\n            </div>\n            <label>\n                <p>Latitude:</p>\n                <input type=\"text\" formControlName=\"lat\">\n            </label>\n            <div *ngIf=\"lat.invalid && (lat.dirty || lat.touched)\" class=\"alert\">\n                <div *ngIf=\"lat.errors?.required\">\n                    Latitude is required\n                </div>\n                <div *ngIf=\"lat.errors?.pattern\">\n                    Latitude format must be XX.XXXX or XXX.XXXX (e.g. -37.3159)\n                </div>\n            </div>\n            <label>\n                <p>Longitude:</p>\n                <input type=\"text\" formControlName=\"lng\">\n            </label>\n            <div *ngIf=\"lng.invalid && (lng.dirty || lng.touched)\" class=\"alert\">\n                <div *ngIf=\"lng.errors?.required\">\n                    Longitude is required\n                </div>\n                <div *ngIf=\"lng.errors?.pattern\">\n                    Longitude format must be XX.XXXX or XXX.XXXX (e.g. 81.1496)\n                </div>\n            </div>\n        </div>\n        <div class=\"formGroup\">\n            <label>\n                Phone Number:\n                <input type=\"text\" formControlName=\"phone\">\n            </label>\n            <div *ngIf=\"phone.invalid && (phone.dirty || phone.touched)\" class=\"alert\">\n                <div *ngIf=\"phone.errors?.required\">\n                    Phone number is required\n                </div>\n            </div>\n            <label>\n                Website:\n                <input type=\"text\" formControlName=\"website\">\n            </label>\n            <div *ngIf=\"website.invalid && (website.dirty || website.touched)\" class=\"alert\">\n                <div *ngIf=\"website.errors?.required\">\n                    Website is required\n                </div>\n            </div>\n        </div>\n        <div class=\"formGroup\" formGroupName=\"company\">\n            <h3>Company</h3>\n            <label>\n                Name:\n                <input type=\"text\" formControlName=\"name\">\n            </label>\n            <div *ngIf=\"companyName.invalid && (companyName.dirty || companyName.touched)\" class=\"alert\">\n                <div *ngIf=\"companyName.errors?.required\">\n                    Company name is required\n                </div>\n            </div>\n            <label>\n                Catchphrase:\n                <input type=\"text\" formControlName=\"catchPhrase\">\n            </label>\n            <div *ngIf=\"catchPhrase.invalid && (catchPhrase.dirty || catchPhrase.touched)\" class=\"alert\">\n                <div *ngIf=\"catchPhrase.errors?.required\">\n                    Catchphrase is required\n                </div>\n            </div>\n            <label>\n                <p>BS:</p>\n                <input type=\"text\" formControlName=\"bs\">\n            </label>\n            <div *ngIf=\"bs.invalid && (bs.dirty || bs.touched)\" class=\"alert\">\n                <div *ngIf=\"bs.errors?.required\">\n                    BS is required\n                </div>\n            </div>\n        </div>\n        <button type=\"submit\" class=\"submit-button\" [disabled]=\"userForm.invalid\">Submit</button>\n    </form>\n</div>";
     /***/
   },
 
@@ -829,23 +829,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.userService = userService;
         this.userForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-          name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-          username: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[a-zA-Z ]+')]),
+          username: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
           email: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email),
           address: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            street: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            suite: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            city: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            zipcode: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            lat: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            lng: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
+            street: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            suite: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            city: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            zipcode: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^[0-9]{5}(?:-[0-9]{4})?$')]),
+            lat: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^-?[0-9]{2,3}\.[0-9]{4}$')]),
+            lng: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('^-?[0-9]{2,3}\.[0-9]{4}$')])
           }),
-          phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-          website: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          website: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
           company: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            catchPhrase: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            bs: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
+            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            catchPhrase: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            bs: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required)
           })
         });
       }
@@ -859,9 +859,69 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return this.userForm.get('name');
         }
       }, {
+        key: "username",
+        get: function get() {
+          return this.userForm.get('username');
+        }
+      }, {
         key: "email",
         get: function get() {
           return this.userForm.get('email');
+        }
+      }, {
+        key: "street",
+        get: function get() {
+          return this.userForm.get('address.street');
+        }
+      }, {
+        key: "suite",
+        get: function get() {
+          return this.userForm.get('address.suite');
+        }
+      }, {
+        key: "city",
+        get: function get() {
+          return this.userForm.get('address.city');
+        }
+      }, {
+        key: "zipcode",
+        get: function get() {
+          return this.userForm.get('address.zipcode');
+        }
+      }, {
+        key: "lat",
+        get: function get() {
+          return this.userForm.get('address.lat');
+        }
+      }, {
+        key: "lng",
+        get: function get() {
+          return this.userForm.get('address.lng');
+        }
+      }, {
+        key: "phone",
+        get: function get() {
+          return this.userForm.get('phone');
+        }
+      }, {
+        key: "website",
+        get: function get() {
+          return this.userForm.get('website');
+        }
+      }, {
+        key: "companyName",
+        get: function get() {
+          return this.userForm.get('company.name');
+        }
+      }, {
+        key: "catchPhrase",
+        get: function get() {
+          return this.userForm.get('company.catchPhrase');
+        }
+      }, {
+        key: "bs",
+        get: function get() {
+          return this.userForm.get('company.bs');
         }
       }, {
         key: "onSubmit",

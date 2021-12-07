@@ -11,23 +11,35 @@ import { User } from '../user';
 export class AddUserComponent implements OnInit {
 
   userForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    username: new FormControl(''),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Z ]+')
+    ]),
+    username: new FormControl('', Validators.required),
     email: new FormControl('', Validators.email),
     address: new FormGroup({
-      street: new FormControl(''),
-      suite: new FormControl(''),
-      city: new FormControl(''),
-      zipcode: new FormControl(''),
-      lat: new FormControl(''),
-      lng: new FormControl('')
+      street: new FormControl('', Validators.required),
+      suite: new FormControl('', Validators.required),
+      city: new FormControl('', Validators.required),
+      zipcode: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^[0-9]{5}(?:-[0-9]{4})?$')
+      ]),
+      lat: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
+      ]),
+      lng: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
+      ])
     }),
-    phone: new FormControl(''),
-    website: new FormControl(''),
+    phone: new FormControl('', Validators.required),
+    website: new FormControl('', Validators.required),
     company: new FormGroup({
-      name: new FormControl(''),
-      catchPhrase: new FormControl(''),
-      bs: new FormControl('')
+      name: new FormControl('', Validators.required),
+      catchPhrase: new FormControl('', Validators.required),
+      bs: new FormControl('', Validators.required)
     })
   });
   
@@ -40,8 +52,56 @@ export class AddUserComponent implements OnInit {
     return this.userForm.get('name');
   }
 
+  get username() {
+    return this.userForm.get('username');
+  }
+
   get email() {
     return this.userForm.get('email');
+  }
+
+  get street() {
+    return this.userForm.get('address.street');
+  }
+
+  get suite() {
+    return this.userForm.get('address.suite');
+  }
+
+  get city() {
+    return this.userForm.get('address.city');
+  }
+
+  get zipcode() {
+    return this.userForm.get('address.zipcode');
+  }
+
+  get lat() {
+    return this.userForm.get('address.lat');
+  }
+
+  get lng() {
+    return this.userForm.get('address.lng');
+  }
+
+  get phone() {
+    return this.userForm.get('phone');
+  }
+
+  get website() {
+    return this.userForm.get('website');
+  }
+
+  get companyName() {
+    return this.userForm.get('company.name');
+  }
+
+  get catchPhrase() {
+    return this.userForm.get('company.catchPhrase');
+  }
+
+  get bs() {
+    return this.userForm.get('company.bs');
   }
 
   onSubmit() {

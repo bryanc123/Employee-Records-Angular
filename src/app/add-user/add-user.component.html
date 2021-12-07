@@ -13,11 +13,19 @@
                 <div *ngIf="name.errors?.required">
                     Name is required
                 </div>
+                <div *ngIf="name.errors?.pattern">
+                    Name must contain letters or spaces only
+                </div>
             </div>
             <label>
                 <p>Username:</p>
                 <input type="text" formControlName="username">
             </label>
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert">
+                <div *ngIf="username.errors?.required">
+                    Username is required
+                </div>
+            </div>
             <label>
                 <p>Email:</p>
                 <input type="text" formControlName="email" [class.invalid-input]="email.invalid && (email.dirty || email.touched)">
@@ -34,36 +42,85 @@
                 <p>Street:</p>
                 <input type="text" formControlName="street">
             </label>
+            <div *ngIf="street.invalid && (street.dirty || street.touched)" class="alert">
+                <div *ngIf="street.errors?.required">
+                    Street is required
+                </div>
+            </div>
             <label>
                 <p>Suite:</p>
                 <input type="text" formControlName="suite">
             </label>
+            <div *ngIf="suite.invalid && (suite.dirty || suite.touched)" class="alert">
+                <div *ngIf="suite.errors?.required">
+                    Suite is required
+                </div>
+            </div>
             <label>
                 <p>City:</p>
                 <input type="text" formControlName="city">
             </label>
+            <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert">
+                <div *ngIf="city.errors?.required">
+                    City is required
+                </div>
+            </div>
             <label>
                 <p>ZIP Code:</p>
                 <input type="text" formControlName="zipcode">
             </label>
+            <div *ngIf="zipcode.invalid && (zipcode.dirty || zipcode.touched)" class="alert">
+                <div *ngIf="zipcode.errors?.required">
+                    ZIP Code is required
+                </div>
+                <div *ngIf="zipcode.errors?.pattern">
+                    ZIP Code format must be XXXXX or XXXXX-XXXX (each X is an integer)
+                </div>
+            </div>
             <label>
                 <p>Latitude:</p>
                 <input type="text" formControlName="lat">
             </label>
+            <div *ngIf="lat.invalid && (lat.dirty || lat.touched)" class="alert">
+                <div *ngIf="lat.errors?.required">
+                    Latitude is required
+                </div>
+                <div *ngIf="lat.errors?.pattern">
+                    Latitude format must be XX.XXXX or XXX.XXXX (e.g. -37.3159)
+                </div>
+            </div>
             <label>
                 <p>Longitude:</p>
                 <input type="text" formControlName="lng">
             </label>
+            <div *ngIf="lng.invalid && (lng.dirty || lng.touched)" class="alert">
+                <div *ngIf="lng.errors?.required">
+                    Longitude is required
+                </div>
+                <div *ngIf="lng.errors?.pattern">
+                    Longitude format must be XX.XXXX or XXX.XXXX (e.g. 81.1496)
+                </div>
+            </div>
         </div>
         <div class="formGroup">
             <label>
                 Phone Number:
                 <input type="text" formControlName="phone">
             </label>
+            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert">
+                <div *ngIf="phone.errors?.required">
+                    Phone number is required
+                </div>
+            </div>
             <label>
                 Website:
                 <input type="text" formControlName="website">
             </label>
+            <div *ngIf="website.invalid && (website.dirty || website.touched)" class="alert">
+                <div *ngIf="website.errors?.required">
+                    Website is required
+                </div>
+            </div>
         </div>
         <div class="formGroup" formGroupName="company">
             <h3>Company</h3>
@@ -71,14 +128,29 @@
                 Name:
                 <input type="text" formControlName="name">
             </label>
+            <div *ngIf="companyName.invalid && (companyName.dirty || companyName.touched)" class="alert">
+                <div *ngIf="companyName.errors?.required">
+                    Company name is required
+                </div>
+            </div>
             <label>
                 Catchphrase:
                 <input type="text" formControlName="catchPhrase">
             </label>
+            <div *ngIf="catchPhrase.invalid && (catchPhrase.dirty || catchPhrase.touched)" class="alert">
+                <div *ngIf="catchPhrase.errors?.required">
+                    Catchphrase is required
+                </div>
+            </div>
             <label>
                 <p>BS:</p>
                 <input type="text" formControlName="bs">
             </label>
+            <div *ngIf="bs.invalid && (bs.dirty || bs.touched)" class="alert">
+                <div *ngIf="bs.errors?.required">
+                    BS is required
+                </div>
+            </div>
         </div>
         <button type="submit" class="submit-button" [disabled]="userForm.invalid">Submit</button>
     </form>
