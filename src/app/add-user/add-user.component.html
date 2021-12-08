@@ -111,6 +111,15 @@
                 <div *ngIf="phone.errors?.required">
                     Phone number is required
                 </div>
+                <div *ngIf="phone.errors?.pattern">
+                    <p>Phone number invalid</p>
+                    <p>Examples of valid phone numbers:</p>
+                    <ul>
+                        <li>18051231234</li>
+                        <li>1-805-123-1234</li>
+                        <li>1-805-123-1234 x1234</li>
+                    </ul>
+                </div>
             </div>
             <label>
                 Website:
