@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.menu-item-container {
+    background-color: #D8D8D8;
+    border-left: 10px solid orange;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.menu-item-container p {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: #FFD280;
+    cursor: pointer;
+}
+
+@media screen and (min-height: 1000px) {
+    .wrapper {
+        min-height: 800px;
+    }
+}
