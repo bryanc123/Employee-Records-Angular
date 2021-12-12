@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ArticleListComponent } from './article-list/article-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     AddUserComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,

@@ -23,6 +23,9 @@
                 <p><span class="user-record__field">Website:</span> {{user.website}}</p>
                 <p><span class="user-record__field">Company:</span> {{user.company.name}}</p>
                 <p><span class="user-record__catchphrase">"{{user.company.catchPhrase}}"</span></p>
+                <a routerLink="/users/{{user.id}}/articles" class="user-record__articles-button">
+                    &gt; Read Articles by this User
+                </a>
             </div>
         </div>
     </div>

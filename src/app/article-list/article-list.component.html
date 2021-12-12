@@ -1,0 +1,13 @@
+<section class="articles">
+    <a routerLink="/users" class="back-button">Back to Users</a>
+    <h2 class="articles__heading">Showing Articles by {{user.name}}</h2>
+    <div class="articles__container">
+        <div class="article" *ngFor="let article of articles; let i = index">
+            <img src="assets/images/computer.jpg" class="article__image" *ngIf="i % 2 === 0">
+            <img src="assets/images/phone.jpg" class="article__image" *ngIf="i % 2 === 1">
+            <h2 class="article__title">{{article.title}}</h2>
+            <p class="article__byline">Posted by {{user.name}} on 12/10/2021</p>
+            <p>{{article.body}}</p>
+        </div>
+    </div>
+</section>

@@ -58,6 +58,17 @@
     font-style: italic;
 }
 
+.user-record__articles-button {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.user-record__articles-button:hover {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
     .user-record {
         flex-direction: column;
