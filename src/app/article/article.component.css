@@ -12,29 +12,16 @@
     background-color: #FFD280;
 }
 
-/* Articles */
+/* Article */
 
-.articles {
+.article {
     background-color: #F0F0F0;
     padding: 20px;
 }
 
-.articles__heading {
-    font-size: 0.8rem;
-    margin-bottom: 20px;
-}
-.articles__heading a {
-    color: black;
-    text-decoration: none;
-}
-.articles__heading a:hover {
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.article {
+.article__container {
     background-color: white;
-    margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .article__image {
@@ -42,19 +29,11 @@
 }
 
 .article__image-caption {
-    font-size: 14px;
     margin-bottom: 20px;
 }
 
-.article__title {
+.article__heading {
     margin-bottom: 10px;
-}
-.article__title a {
-    color: black;
-    text-decoration: none;
-}
-.article__title a:hover {
-    color: rgba(0, 0, 0, 0.6);
 }
 
 .article__author {
@@ -88,36 +67,69 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
-.article__read-more-link {
-    color: black;
+.article__body p {
+    margin-bottom: 20px;
+}
+
+/* Comments */
+
+.comments {
+    background-color: #F0F0F0;
+    padding: 20px;
+}
+
+.comments__container {
+    background-color: white;
+    padding: 20px;
+}
+
+.comment {
+    padding: 20px 0;
+}
+.comment:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.comment__heading {
+    margin-bottom: 20px;
+}
+
+.comment__profile-image {
+    align-items: center;
+    background-color:#ACE1AF;
+    border-radius: 50%;
+    display: flex;
+    font-size: 44px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+
+.comment__email {
+    margin-left: 10px;
+}
+
+.comment__name {
     font-weight: bold;
-    text-decoration: none;
-}
-.article__read-more-link:hover {
-    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 500px) {
-    .articles__heading {
-        font-size: 1.2rem;
-    }
+.comment__datetime {
+    font-style: italic;
+    margin-top: 20px;
 }
 
-@media only screen and (min-width: 600px) {
-    .articles__container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width: 800px) {
+    .article__container {
+        max-width: 700px;
     }
-    .article {
-        max-width: 45vw;
+
+    .comments__container {
+        max-width: 700px;
     }
 }
 
 @media only screen and (min-width: 1000px) {
-    .article {
-        max-width: 47vw;
-    }
-
     .article__byline {
         font-size: 16px;
     }

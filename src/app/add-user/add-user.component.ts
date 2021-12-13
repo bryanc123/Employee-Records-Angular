@@ -10,6 +10,9 @@ import { User } from '../user';
 })
 export class AddUserComponent implements OnInit {
 
+  private success: boolean;
+  private error: any;
+
   userForm = new FormGroup({
     name: new FormControl('', [
       Validators.required,
@@ -128,8 +131,21 @@ export class AddUserComponent implements OnInit {
       company: this.userForm.get('company').value
     }).subscribe(user => {
       console.log(this.userForm.value);
-      //this.userForm.reset();
+      this.userService.postUser(this.userForm.value)
+        .subscribe(
+          user => {
+            console.log(user);
+            this.success = true;
+            window.scrollTo(0, 0);
+          },
+          error => (this.error = error)
+        )
+      this.userForm.reset();
     });
+  }
+
+  closeSuccessMessage(): void {
+    this.success = false;
   }
 
 }

@@ -3,38 +3,23 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError as observableThrowError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
-import { User } from './user';
+import { Comment } from './comment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-  private usersUrl = 'https://jsonplaceholder.typicode.com/users';
+export class CommentService {
+  private commentsUrl = 'https://jsonplaceholder.typicode.com/comments';
 
   constructor(private http: HttpClient) { }
 
-  getUsers() {
+  getComments(articleId: number) {
     return this.http
-      .get<User[]>(this.usersUrl)
+      .get<Comment[]>(this.commentsUrl)
       .pipe(
-        map(data => data),
+        map(comments => comments.filter(comment => comment.postId === articleId)),
         catchError(this.handleError)
       );
-  }
-
-  getUser(id: number): Observable<User> {
-    return this.getUsers().pipe(
-      map(users => users.find(user => user.id === id))
-    );
-  }
-
-  postUser(user: User): Observable<User> {
-    const headers = new Headers({
-      'Content-Type': 'application/json'
-    });
-
-    return this.http.post<User>(this.usersUrl, user)
-      .pipe(catchError(this.handleError));
   }
 
   private handleError(res: HttpErrorResponse | any) {

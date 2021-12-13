@@ -38,6 +38,7 @@
 
 .user-record__avatar {
     background-color: yellow;
+    border-radius: 50%;
     padding: 20px;
 }
 

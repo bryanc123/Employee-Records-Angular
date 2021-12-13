@@ -1,0 +1,67 @@
+<section class="article">
+    <a routerLink="/users/{{user.id}}/articles" class="back-button">Back to Articles</a>
+    <div class="article__container">
+        <img src="assets/images/computer.jpg" class="article__image" *ngIf="articleId % 2 === 1">
+        <p class="article__image-caption" *ngIf="articleId % 2 === 1">Photo by <a href="https://pixnio.com/author/milim84">Marko Milivojevic</a></p>
+        <img src="assets/images/phone.jpg" class="article__image" *ngIf="articleId % 2 === 0">
+        <p class="article__image-caption" *ngIf="articleId % 2 === 0"><a href="https://pixnio.com/objects/electronics-devices/iphone-pictures/mobile-phone-computer-screen-technology-telephone-wireless-portable-business">Link to Image Source</a></p>
+        <h2 class="article__heading">{{article.title | titlecase }}</h2>
+        <div class="article__author">
+            <div class="article__profile-image">
+                <i class="far fa-user-circle"></i>
+            </div>
+            <p class="article__byline" style="margin-left: 10px">
+                Posted by 
+                <a routerLink="/users/{{user.id}}" class="article__profile-link">
+                    {{user.name}}
+                </a>
+                on 12/10/2021
+            </p>
+        </div>
+        <div class="article__body">
+            <p>{{article.body}}</p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum blanditiis voluptate nostrum?
+                Corrupti quasi officiis obcaecati at reiciendis voluptatibus, eligendi debitis excepturi
+                tenetur quidem labore. Reiciendis officiis illum possimus explicabo.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eaque unde earum rerum quia
+                vero omnis quos consequuntur necessitatibus! Possimus beatae omnis optio reprehenderit
+                molestiae commodi cum mollitia incidunt non perspiciatis, illo voluptatibus distinctio
+                modi earum praesentium molestias sapiente ducimus deserunt iste recusandae eos itaque
+                illum neque ea? Distinctio, repudiandae.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quidem! Illum voluptate
+                nostrum eveniet officiis consequatur inventore mollitia iste iusto pariatur hic sequi
+                debitis placeat cumque, vitae dolor sit iure corporis accusantium sint velit ipsum eos
+                doloribus! Accusamus possimus iste ipsa id animi enim neque odio aperiam laborum ducimus
+                quisquam iusto quos architecto assumenda optio repudiandae laudantium nisi debitis officia
+                similique reiciendis perspiciatis, repellat a fugiat. Magnam porro dolor animi delectus quia
+                ad perferendis sapiente, mollitia maxime tenetur iure illo?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, autem!
+            </p>
+        </div>
+    </div>
+</section>
+<section class="comments">
+    <div class="comments__container">
+        <h2 class="comments__heading">Comments</h2>
+        <div class="comments__body">
+            <div class="comment" *ngFor="let comment of comments">
+                <div class="comment__heading" style="align-items: center; display: flex">
+                    <div class="comment__profile-image">
+                        <i class="far fa-user-circle"></i>
+                    </div>
+                    <p class="comment__email">{{comment.email}} says:</p>
+                </div>
+                <p class="comment__name">{{comment.name}}</p>
+                <p class="comment__body">{{comment.body}}</p>
+                <p class="comment__datetime">Posted on 12/10/2021 at 10:30PM</p>
+            </div>
+        </div>
+    </div>
+</section>

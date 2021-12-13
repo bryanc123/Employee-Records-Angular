@@ -7,7 +7,7 @@
         <div class="user-record">
             <div class="user-record__avatar-container">
                 <div class="user-record__avatar"><i class="far fa-user-circle fa-5x"></i></div>
-                <span>Position</span>
+                <span>Employee</span>
             </div>
             <div class="user-record__details">
                 <p><span class="user-record__field">Email:</span> {{user.email}}</p>
@@ -16,10 +16,16 @@
                 <p><span class="user-record__field">Website:</span> {{user.website}}</p>
                 <p><span class="user-record__field">Company:</span> {{user.company.name}}</p>
                 <p><span class="user-record__catchphrase">"{{user.company.catchPhrase}}"</span></p>
-                <p><span class="user-record__field">Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Praesent interdum condimentum mauris id condimentum.
-                Nunc egestas sapien quis velit aliquet hendrerit.
-                Integer vitae felis hendrerit, sollicitudin lacus vel, scelerisque dolor.</p>
+                <p>
+                    <span class="user-record__field">Description:</span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent interdum condimentum mauris id condimentum.
+                    Nunc egestas sapien quis velit aliquet hendrerit.
+                    Integer vitae felis hendrerit, sollicitudin lacus vel, scelerisque dolor.
+                </p>
+                <a routerLink="/users/{{user.id}}/articles" class="user-record__articles-button">
+                    &gt; Read Articles by this User
+                </a>
             </div>
         </div>
     </div>

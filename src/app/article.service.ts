@@ -22,11 +22,11 @@ export class ArticleService {
       );
   }
 
-  // getArticle(id: number): Observable<Article> {
-  //   return this.getArticles().pipe(
-  //     map(articles => articles.find(article => article.id === id))
-  //   );
-  // }
+  getArticle(id: number, articleId: number): Observable<Article> {
+    return this.getArticles(id).pipe(
+      map(articles => articles.find(article => article.id === articleId))
+    );
+  }
 
   postArticle(article: Article): Observable<Article> {
     const headers = new Headers({

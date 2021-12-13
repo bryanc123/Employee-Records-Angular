@@ -1,13 +1,18 @@
-.header-container {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+.header {
+    align-items: center;
     background: linear-gradient(orange 10%, 80%, #FFD280 100%);
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-between;
     margin: 0;
     padding: 20px;
 }
 
-.header-container__title a {
+.header__title a {
     color: black;
+    font-family: Ubuntu;
     text-decoration: none;
 }
 
@@ -16,16 +21,16 @@
     justify-self: end;
     list-style: none;
 }
-
-.navigation-menu-item {
-    border-right: 1px solid black;
+.navigation-menu li a {
     color: black;
     padding: 10px 30px;
     text-decoration: none;
     transition-duration: 0.2s;
 }
-
-.navigation-menu-item:hover {
+.navigation-menu li:not(:last-child) a {
+    border-right: 1px solid black;
+}
+.navigation-menu li a:hover {
     background-color: #FFD280;
     cursor: pointer;
 }
@@ -64,15 +69,7 @@
     padding: 20px;
 }
 
-@media screen and (max-width: 740px){
-    .header-container {
-        display: flex;
-    }
-
-    .header-container__title {
-        flex-grow: 1;
-        font-size: 24px;
-    }
+@media screen and (max-width: 800px){
 
     .navigation-menu {
         display: none;

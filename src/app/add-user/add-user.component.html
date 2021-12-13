@@ -1,6 +1,15 @@
 <div class="back-button-container">
     <a routerLink="/" class="back-button">Back to Home</a>
 </div>
+<div class="note">
+    <strong>Note:</strong> You cannot submit a new user until all inputs in the form are valid
+</div>
+<div class="success-container">
+    <div *ngIf="success" class="success">
+        User successfully added to database!
+        <i class="fa fa-times" (click)="closeSuccessMessage()"></i>
+    </div>
+</div>
 <div class="formContainer">
     <h2>Add Employee Record</h2>
     <form id="userForm" [formGroup]="userForm" (ngSubmit)="onSubmit()">
