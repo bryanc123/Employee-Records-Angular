@@ -1,13 +1,12 @@
-<div class="back-button-container">
-    <a routerLink="/users" class="back-button">Back to User Records</a>
-  </div>
 <section class="users">
-    <div class="user-heading"><h2>{{user.name}} Profile</h2></div>
+    <a routerLink="/users" class="back-button">Back to User Records</a>
+    <h2 class="user-heading">{{user.name}} Profile</h2>
     <div class="user-container">
         <div class="user-record">
             <div class="user-record__avatar-container">
-                <div class="user-record__avatar"><i class="far fa-user-circle fa-5x"></i></div>
-                <span>Employee</span>
+                <div class="user-record__avatar">
+                    <i class="far fa-user-circle fa-5x"></i>
+                </div>
             </div>
             <div class="user-record__details">
                 <p><span class="user-record__field">Email:</span> {{user.email}}</p>

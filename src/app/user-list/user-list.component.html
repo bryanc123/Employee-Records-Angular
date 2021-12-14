@@ -1,16 +1,13 @@
-<div class="back-button-container">
-    <a routerLink="/" class="back-button">Back to Home</a>
-</div>
 <section class="users">
+    <a routerLink="/" class="back-button">Back to Home</a>
     <div class="user-container">
         <div class="user-record" *ngFor="let user of users">
             <div class="user-record__avatar-container">
-                <a routerLink="/users/{{user.id}}">
-                    <div class="user-record__avatar">
+                <div class="user-record__avatar">
+                    <a routerLink="/users/{{user.id}}">
                         <i class="far fa-user-circle fa-5x"></i>
-                    </div>
-                </a>
-                <span>Employee</span>
+                    </a>
+                </div>
             </div>
             <div class="user-record__details">
                 <h3>

@@ -1,11 +1,9 @@
-.back-button-container {
-    margin: 20px;
-}
-
 .back-button {
     background-color: orange;
     border-radius: 10px;
     color:black;
+    display: inline-block;
+    margin: 20px;
     padding: 10px;
     text-decoration: none;
     transition-duration: 0.2s;
@@ -29,6 +27,7 @@
 }
 
 .user-record__avatar-container {
+    padding: 0 10px 20px 10px;
     text-align: center;
 }
 .user-record__avatar-container a {
@@ -37,9 +36,15 @@
 }
 
 .user-record__avatar {
-    background-color: yellow;
+    align-items: center;
+    background-color:#ACE1AF;
     border-radius: 50%;
-    padding: 20px;
+    display: flex;
+    font-size: 16px;
+    height: 100px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100px;
 }
 
 .user-record__details {
@@ -73,15 +78,5 @@
 @media screen and (max-width: 600px) {
     .user-record {
         flex-direction: column;
-    }
-
-    .user-record__avatar-container {
-        margin-bottom: 20px;
-    }
-
-    .user-record__avatar {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
     }
 }

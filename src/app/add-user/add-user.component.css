@@ -27,19 +27,16 @@ ul li {
 
 /* Back Button */
 
-.back-button-container {
-    margin: 20px 20px
-}
-
 .back-button {
     background-color: orange;
     border-radius: 10px;
     color: black;
+    display: inline-block;
+    margin: 20px;
     padding: 10px;
     text-decoration: none;
     transition-duration: 0.2s;
 }
-
 .back-button:hover {
     background-color: #FFD280;
     cursor: pointer;
@@ -80,7 +77,7 @@ ul li {
     border: 2px solid #D8D8D8;
     margin: 20px auto;
     padding: 20px;
-    width: 320px;
+    width: 90%;
 }
 
 .formGroup {
@@ -117,4 +114,10 @@ ul li {
 .submit-button:disabled {
     background-color: #C8C8C8;
     cursor: default;
+}
+
+@media only screen and (min-width: 500px) {
+    .formContainer {
+        width: 320px;
+    }
 }

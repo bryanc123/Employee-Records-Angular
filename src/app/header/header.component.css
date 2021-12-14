@@ -4,7 +4,6 @@
     align-items: center;
     background: linear-gradient(orange 10%, 80%, #FFD280 100%);
     display: flex;
-    font-size: 1.2rem;
     justify-content: space-between;
     margin: 0;
     padding: 20px;
@@ -13,6 +12,8 @@
 .header__title a {
     color: black;
     font-family: Ubuntu;
+    font-size: 1.8rem;
+    margin-left: 10px;
     text-decoration: none;
 }
 
@@ -67,6 +68,13 @@
 .introductory-text-container {
     background-color: yellow;
     padding: 20px;
+}
+
+@media screen and (max-width: 600px){
+
+    .header__title a {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 800px){
