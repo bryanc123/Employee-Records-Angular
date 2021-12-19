@@ -9,11 +9,14 @@
     padding: 20px;
 }
 
+.fa-database {
+    margin-right: 10px;
+}
+
 .header__title a {
     color: black;
     font-family: Ubuntu;
     font-size: 1.8rem;
-    margin-left: 10px;
     text-decoration: none;
 }
 
