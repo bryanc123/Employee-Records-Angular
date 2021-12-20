@@ -12,8 +12,8 @@ import { UserService } from '../user.service';
 })
 export class UserDetailComponent implements OnInit {
   public userId;
-  private user: User;
-  private error: any;
+  public user: User;
+  public error: any;
 
   constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 

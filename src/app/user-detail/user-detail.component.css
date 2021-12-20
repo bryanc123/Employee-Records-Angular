@@ -18,8 +18,13 @@
     background-color: #FFEDCC;
 }
 
-.user-heading {
-    margin: 0px 0px 10px 20px;
+.user__heading {
+    margin: 0 0 10px 20px;
+}
+
+.user__description {
+    font-size: 1.2rem;
+    margin: 0 0 20px 20px;
 }
 
 .user-record {

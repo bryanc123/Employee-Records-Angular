@@ -2,15 +2,30 @@
 <div class="note">
     <strong>Note:</strong> You cannot submit a new user until all inputs in the form are valid
 </div>
-<div class="success-container">
+<!-- <div class="success-container">
     <div *ngIf="success" class="success">
         User successfully added to database!
         <i class="fa fa-times" (click)="closeSuccessMessage()"></i>
     </div>
-</div>
+</div> -->
 <div class="formContainer">
     <h2>Add Employee Record</h2>
-    <form id="userForm" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+    <mat-stepper orientation="vertical" [linear]="false" #stepper>
+        <!-- <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step> -->
+      </mat-stepper>
+    <!-- <form id="userForm" [formGroup]="userForm" (ngSubmit)="onSubmit()">
         <div class="formGroup">
             <label>
                 <p>Name:</p>
@@ -168,6 +183,6 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="submit-button" [disabled]="userForm.invalid">Submit</button>
-    </form>
+        <button type="submit" class="submit-button" [disabled]="userForm.invalid">Submit</button> -->
+    <!-- </form> -->
 </div>

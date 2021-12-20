@@ -16,9 +16,9 @@ import { ArticleService } from '../article.service';
 })
 export class ArticleListComponent implements OnInit {
   public userId: number;
-  private user: User;
-  private articles: Article[];
-  private error: any;
+  public user: User;
+  public articles: Article[];
+  public error: any;
 
   constructor(
     private userService: UserService,

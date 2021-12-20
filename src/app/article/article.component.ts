@@ -17,10 +17,10 @@ import { CommentService } from '../comment.service';
 export class ArticleComponent implements OnInit {
   public userId: number;
   public articleId: number;
-  private user: User;
-  private article: Article;
-  private comments: Comment[];
-  private error: any;
+  public user: User;
+  public article: Article;
+  public comments: Comment[];
+  public error: any;
   
   constructor(
     private userService: UserService,
