@@ -12,6 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
+          "defaultConfiguration": "development",
           "options": {
             "buildOptimizer": true,
             "outputPath": "dist/angular-users",
@@ -31,6 +32,16 @@
             "scripts": []
           },
           "configurations": {
+            "development": {
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": true,
+              "extractLicenses": false,
+              "vendorChunk": true,
+              "buildOptimizer": false,
+              "budgets": []
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -68,10 +79,14 @@
             "browserTarget": "angular-users:build"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "angular-users:build:development"
+            },
             "production": {
               "browserTarget": "angular-users:build:production"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

@@ -118,6 +118,10 @@ export class AddUserComponent implements OnInit {
     return this.userForm.get('formArray');
   }
 
+  get nameControl() {
+    return this.formArray.get('0').value;
+  }
+
   get name() {
     return this.formArray.get('0').value.name;
   }
