@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray, AbstractControl } from '@angular/forms';
 
 import { UserService } from '../user.service';
@@ -11,20 +11,21 @@ import { User } from '../user';
 })
 export class AddUserComponent implements OnInit {
 
+  @ViewChild('stepper') stepper;
   public success: boolean;
   public userAdded: string;
   public error: any;
 
   userForm: FormGroup;
-  nameFormGroup: FormGroup;
-  addressFormGroup: FormGroup;
-  contactFormGroup: FormGroup;
-  companyFormGroup: FormGroup;
   
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService
   ) { }
+
+  reset() {
+    this.stepper.reset();
+  }
 
   ngOnInit() {
 
@@ -71,46 +72,46 @@ export class AddUserComponent implements OnInit {
       ])
     });
 
-    this.nameFormGroup = this.formBuilder.group({
-      name: ['', [
-        Validators.required,
-        Validators.pattern('^[a-zA-Z ]+')
-      ]],
-      username: ['', Validators.required],
-      email: ['', Validators.email],
-    });
+    // this.nameFormGroup = this.formBuilder.group({
+    //   name: ['', [
+    //     Validators.required,
+    //     Validators.pattern('^[a-zA-Z ]+')
+    //   ]],
+    //   username: ['', Validators.required],
+    //   email: ['', Validators.email],
+    // });
 
-    this.addressFormGroup = this.formBuilder.group({
-      street: ['', Validators.required],
-      suite: ['', Validators.required],
-      city: ['', Validators.required],
-      zipcode: ['', [
-        Validators.required,
-        Validators.pattern('^[0-9]{5}(?:-[0-9]{4})?$')
-      ]],
-      lat: ['', [
-        Validators.required,
-        Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
-      ]],
-      lng: ['', [
-        Validators.required,
-        Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
-      ]]
-    });
+    // this.addressFormGroup = this.formBuilder.group({
+    //   street: ['', Validators.required],
+    //   suite: ['', Validators.required],
+    //   city: ['', Validators.required],
+    //   zipcode: ['', [
+    //     Validators.required,
+    //     Validators.pattern('^[0-9]{5}(?:-[0-9]{4})?$')
+    //   ]],
+    //   lat: ['', [
+    //     Validators.required,
+    //     Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
+    //   ]],
+    //   lng: ['', [
+    //     Validators.required,
+    //     Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
+    //   ]]
+    // });
 
-    this.contactFormGroup = this.formBuilder.group({
-      phone: ['', [
-        Validators.required,
-        Validators.pattern('^[ ]*(?:[ ]?([0-9]{1,3}))?[-. (]*([0-9]{3})[-. )]*([0-9]{3})[-. ]*([0-9]{4})(?: *x([0-9]+))?[ ]*$')
-      ]],
-      website: ['', Validators.required]
-    });
+    // this.contactFormGroup = this.formBuilder.group({
+    //   phone: ['', [
+    //     Validators.required,
+    //     Validators.pattern('^[ ]*(?:[ ]?([0-9]{1,3}))?[-. (]*([0-9]{3})[-. )]*([0-9]{3})[-. ]*([0-9]{4})(?: *x([0-9]+))?[ ]*$')
+    //   ]],
+    //   website: ['', Validators.required]
+    // });
 
-    this.companyFormGroup = this.formBuilder.group({
-      name: ['', Validators.required],
-      catchPhrase: ['', Validators.required],
-      bs: ['', Validators.required]
-    });
+    // this.companyFormGroup = this.formBuilder.group({
+    //   name: ['', Validators.required],
+    //   catchPhrase: ['', Validators.required],
+    //   bs: ['', Validators.required]
+    // });
 
   }
 
@@ -178,6 +179,82 @@ export class AddUserComponent implements OnInit {
     return this.formArray.get('3').value.bs;
   }
 
+  get nameFormGroup() {
+    let formArray = this.userForm.controls.formArray as FormArray;
+    return formArray.controls[0] as FormGroup;
+  }
+
+  get nameFormControl() {
+    return this.nameFormGroup.controls.name;
+  }
+
+  get usernameFormControl() {
+    return this.nameFormGroup.controls.username;
+  }
+
+  get emailFormControl() {
+    return this.nameFormGroup.controls.email;
+  }
+
+  get addressFormGroup() {
+    let formArray = this.userForm.controls.formArray as FormArray;
+    return formArray.controls[1] as FormGroup;
+  }
+
+  get streetFormControl() {
+    return this.addressFormGroup.controls.street;
+  }
+
+  get suiteFormControl() {
+    return this.addressFormGroup.controls.suite;
+  }
+
+  get cityFormControl() {
+    return this.addressFormGroup.controls.city;
+  }
+
+  get zipcodeFormControl() {
+    return this.addressFormGroup.controls.zipcode;
+  }
+
+  get latFormControl() {
+    return this.addressFormGroup.controls.lat;
+  }
+
+  get lngFormControl() {
+    return this.addressFormGroup.controls.lng;
+  }
+
+  get contactFormGroup() {
+    let formArray = this.userForm.controls.formArray as FormArray;
+    return formArray.controls[2] as FormGroup;
+  }
+
+  get phoneFormControl() {
+    return this.contactFormGroup.controls.phone;
+  }
+
+  get websiteFormControl() {
+    return this.contactFormGroup.controls.website;
+  }
+
+  get companyFormGroup() {
+    let formArray = this.userForm.controls.formArray as FormArray;
+    return formArray.controls[3] as FormGroup;
+  }
+
+  get companyNameFormControl() {
+    return this.companyFormGroup.controls.name;
+  }
+
+  get catchPhraseFormControl() {
+    return this.companyFormGroup.controls.catchPhrase;
+  }
+
+  get bsFormControl() {
+    return this.companyFormGroup.controls.bs;
+  }
+
   onSubmit() {
     this.userService.postUser({
       id: 11,
@@ -208,6 +285,7 @@ export class AddUserComponent implements OnInit {
         this.userAdded = this.username;
         this.userForm.reset();
         window.scrollTo(0, 0);
+        this.reset();
       },
       error => this.error = error
     );
