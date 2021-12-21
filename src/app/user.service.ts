@@ -30,7 +30,7 @@ export class UserService {
 
   postUser(user: User): Observable<User> {
     const headers = new Headers({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json; charset=UTF-8'
     });
 
     return this.http.post<User>(this.usersUrl, user)

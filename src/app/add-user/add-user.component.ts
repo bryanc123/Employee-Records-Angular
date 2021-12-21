@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray, AbstractControl } from '@angular/forms';
+
 import { UserService } from '../user.service';
 import { User } from '../user';
 
@@ -10,55 +11,67 @@ import { User } from '../user';
 })
 export class AddUserComponent implements OnInit {
 
-  private success: boolean;
-  private error: any;
+  public success: boolean;
+  public userAdded: string;
+  public error: any;
 
-  userFormGroup: FormGroup;
+  userForm: FormGroup;
+  nameFormGroup: FormGroup;
   addressFormGroup: FormGroup;
   contactFormGroup: FormGroup;
   companyFormGroup: FormGroup;
-
-  // userForm = new FormGroup({
-  //   name: new FormControl('', [
-  //     Validators.required,
-  //     Validators.pattern('^[a-zA-Z ]+')
-  //   ]),
-  //   username: new FormControl('', Validators.required),
-  //   email: new FormControl('', Validators.email),
-  //   address: new FormGroup({
-  //     street: new FormControl('', Validators.required),
-  //     suite: new FormControl('', Validators.required),
-  //     city: new FormControl('', Validators.required),
-  //     zipcode: new FormControl('', [
-  //       Validators.required,
-  //       Validators.pattern('^[0-9]{5}(?:-[0-9]{4})?$')
-  //     ]),
-  //     lat: new FormControl('', [
-  //       Validators.required,
-  //       Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
-  //     ]),
-  //     lng: new FormControl('', [
-  //       Validators.required,
-  //       Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
-  //     ])
-  //   }),
-  //   phone: new FormControl('', [
-  //     Validators.required,
-  //     Validators.pattern('^[ ]*(?:[ ]?([0-9]{1,3}))?[-. (]*([0-9]{3})[-. )]*([0-9]{3})[-. ]*([0-9]{4})(?: *x([0-9]+))?[ ]*$')
-  //   ]),
-  //   website: new FormControl('', Validators.required),
-  //   company: new FormGroup({
-  //     name: new FormControl('', Validators.required),
-  //     catchPhrase: new FormControl('', Validators.required),
-  //     bs: new FormControl('', Validators.required)
-  //   })
-  // });
   
-  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
 
-    this.userFormGroup = this.formBuilder.group({
+    this.userForm = this.formBuilder.group({
+      formArray: this.formBuilder.array([
+        this.formBuilder.group({
+          name: ['', [
+            Validators.required,
+            Validators.pattern('^[a-zA-Z ]+')
+          ]],
+          username: ['', Validators.required],
+          email: ['', Validators.email],
+        }),
+        this.formBuilder.group({
+          street: ['', Validators.required],
+          suite: ['', Validators.required],
+          city: ['', Validators.required],
+          zipcode: ['', [
+            Validators.required,
+            Validators.pattern('^[0-9]{5}(?:-[0-9]{4})?$')
+          ]],
+          lat: ['', [
+            Validators.required,
+            Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
+          ]],
+          lng: ['', [
+            Validators.required,
+            Validators.pattern('^-?[0-9]{2,3}\.[0-9]{4}$')
+          ]]
+        }),
+        this.formBuilder.group({
+          phone: ['', [
+            Validators.required,
+            Validators.pattern('^[ ]*(?:[ ]?([0-9]{1,3}))?[-. (]*([0-9]{3})[-. )]*([0-9]{3})[-. ]*([0-9]{4})(?: *x([0-9]+))?[ ]*$')
+          ]],
+          website: ['', Validators.required]
+        }),
+        this.formBuilder.group({
+          name: ['', Validators.required],
+          catchPhrase: ['', Validators.required],
+          bs: ['', Validators.required]
+        }),
+        this.formBuilder.group({})
+      ])
+    });
+
+    this.nameFormGroup = this.formBuilder.group({
       name: ['', [
         Validators.required,
         Validators.pattern('^[a-zA-Z ]+')
@@ -101,95 +114,100 @@ export class AddUserComponent implements OnInit {
 
   }
 
-  // get name() {
-  //   return this.userForm.get('name');
-  // }
+  get formArray() : AbstractControl | null {
+    return this.userForm.get('formArray');
+  }
 
-  // get username() {
-  //   return this.userForm.get('username');
-  // }
+  get name() {
+    return this.formArray.get('0').value.name;
+  }
 
-  // get email() {
-  //   return this.userForm.get('email');
-  // }
+  get username() {
+    return this.formArray.get('0').value.username;
+  }
 
-  // get street() {
-  //   return this.userForm.get('address.street');
-  // }
+  get email() {
+    return this.formArray.get('0').value.email;
+  }
 
-  // get suite() {
-  //   return this.userForm.get('address.suite');
-  // }
+  get street() {
+    return this.formArray.get('1').value.street;
+  }
 
-  // get city() {
-  //   return this.userForm.get('address.city');
-  // }
+  get suite() {
+    return this.formArray.get('1').value.suite;
+  }
 
-  // get zipcode() {
-  //   return this.userForm.get('address.zipcode');
-  // }
+  get city() {
+    return this.formArray.get('1').value.city;
+  }
 
-  // get lat() {
-  //   return this.userForm.get('address.lat');
-  // }
+  get zipcode() {
+    return this.formArray.get('1').value.zipcode;
+  }
 
-  // get lng() {
-  //   return this.userForm.get('address.lng');
-  // }
+  get lat() {
+    return this.formArray.get('1').value.lat;
+  }
 
-  // get phone() {
-  //   return this.userForm.get('phone');
-  // }
+  get lng() {
+    return this.formArray.get('1').value.lng;
+  }
 
-  // get website() {
-  //   return this.userForm.get('website');
-  // }
+  get phone() {
+    return this.formArray.get('2').value.phone;
+  }
 
-  // get companyName() {
-  //   return this.userForm.get('company.name');
-  // }
+  get website() {
+    return this.formArray.get('2').value.website;
+  }
 
-  // get catchPhrase() {
-  //   return this.userForm.get('company.catchPhrase');
-  // }
+  get companyName() {
+    return this.formArray.get('3').value.name;
+  }
 
-  // get bs() {
-  //   return this.userForm.get('company.bs');
-  // }
+  get catchPhrase() {
+    return this.formArray.get('3').value.catchPhrase;
+  }
 
-  // onSubmit() {
-  //   this.userService.postUser({
-  //     id: 20,
-  //     name: this.userForm.get('name').value,
-  //     username: this.userForm.get('username').value,
-  //     email: this.userForm.get('email').value,
-  //     address: {
-  //       street: this.userForm.get('address.street').value,
-  //       suite: this.userForm.get('address.suite').value,
-  //       city: this.userForm.get('address.city').value,
-  //       zipcode: this.userForm.get('address.zipcode').value,
-  //       geo: {
-  //         lat: this.userForm.get('address.lat').value,
-  //         lng: this.userForm.get('address.lng').value,
-  //       }
-  //     },
-  //     phone: this.userForm.get('phone').value,
-  //     website: this.userForm.get('website').value,
-  //     company: this.userForm.get('company').value
-  //   }).subscribe(user => {
-  //     console.log(this.userForm.value);
-  //     this.userService.postUser(this.userForm.value)
-  //       .subscribe(
-  //         user => {
-  //           console.log(user);
-  //           this.success = true;
-  //           window.scrollTo(0, 0);
-  //         },
-  //         error => (this.error = error)
-  //       )
-  //     this.userForm.reset();
-  //   });
-  // }
+  get bs() {
+    return this.formArray.get('3').value.bs;
+  }
+
+  onSubmit() {
+    this.userService.postUser({
+      id: 11,
+      name: this.name,
+      username: this.username,
+      email: this.email,
+      address: {
+        street: this.street,
+        suite: this.suite,
+        city: this.city,
+        zipcode: this.zipcode,
+        geo: {
+          lat: this.lat,
+          lng: this.lng
+        }
+      },
+      phone: this.phone,
+      website: this.website,
+      company: {
+        name: this.companyName,
+        catchPhrase: this.catchPhrase,
+        bs: this.bs
+      }
+    }).subscribe(
+      user => {
+        console.log(user);
+        this.success = true;
+        this.userAdded = this.username;
+        this.userForm.reset();
+        window.scrollTo(0, 0);
+      },
+      error => this.error = error
+    );
+  }
 
   closeSuccessMessage(): void {
     this.success = false;

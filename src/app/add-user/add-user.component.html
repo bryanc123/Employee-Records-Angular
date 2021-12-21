@@ -2,187 +2,108 @@
 <div class="note">
     <strong>Note:</strong> You cannot submit a new user until all inputs in the form are valid
 </div>
-<!-- <div class="success-container">
+<div class="success-container">
     <div *ngIf="success" class="success">
-        User successfully added to database!
+        {{userAdded}} successfully added to database!
         <i class="fa fa-times" (click)="closeSuccessMessage()"></i>
     </div>
-</div> -->
+</div>
 <div class="formContainer">
     <h2>Add Employee Record</h2>
 
-    <mat-stepper orientation="vertical" [linear]="false" #stepper>
-        <!-- <mat-step [stepControl]="firstFormGroup">
-          <form [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Fill out your name</ng-template>
-            <mat-form-field appearance="fill">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step> -->
-      </mat-stepper>
-    <!-- <form id="userForm" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-        <div class="formGroup">
-            <label>
-                <p>Name:</p>
-                <input type="text" formControlName="name" [class.invalid-input]="name.invalid && (name.dirty || name.touched)">
-            </label>
-            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
-                <div *ngIf="name.errors?.required">
-                    Name is required
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <mat-stepper orientation="vertical" [linear]="false" formArrayName="formArray" #stepper>
+            <mat-step formGroupName="0" [stepControl]="formArray.get([0])">
+                <ng-template matStepLabel>Name</ng-template>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" formControlName="name" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" formControlName="username" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext type="button">Next</button>
                 </div>
-                <div *ngIf="name.errors?.pattern">
-                    Name must contain letters or spaces only
+            </mat-step>
+            <mat-step formGroupName="1" [stepControl]="formArray.get([1])">
+                <ng-template matStepLabel>Address</ng-template>
+                <mat-form-field appearance="fill">
+                    <mat-label>Street</mat-label>
+                    <input matInput placeholder="Street" formControlName="street" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Suite</mat-label>
+                    <input matInput placeholder="Suite" formControlName="suite" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>City</mat-label>
+                    <input matInput placeholder="City" formControlName="city" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>ZIP Code</mat-label>
+                    <input matInput placeholder="e.g. 90001" formControlName="zipcode" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Latitude</mat-label>
+                    <input matInput placeholder="e.g. 38.5816" formControlName="lat" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Longitude</mat-label>
+                    <input matInput placeholder="e.g. 121.4944" formControlName="lng" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious type="button">Previous</button>
+                    <button mat-button matStepperNext type="button">Next</button>
                 </div>
-            </div>
-            <label>
-                <p>Username:</p>
-                <input type="text" formControlName="username">
-            </label>
-            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert">
-                <div *ngIf="username.errors?.required">
-                    Username is required
+            </mat-step>
+            <mat-step formGroupName="2" [stepControl]="formArray.get([2])">
+                <ng-template matStepLabel>Contact Information</ng-template>
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput placeholder="e.g. 8059341236" formControlName="phone" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Website</mat-label>
+                    <input matInput placeholder="Website" formControlName="website" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious type="button">Previous</button>
+                    <button mat-button matStepperNext type="button">Next</button>
                 </div>
-            </div>
-            <label>
-                <p>Email:</p>
-                <input type="text" formControlName="email" [class.invalid-input]="email.invalid && (email.dirty || email.touched)">
-            </label>
-            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
-                <div *ngIf="email.errors?.email">
-                    Email is invalid
+            </mat-step>
+            <mat-step formGroupName="3" [stepControl]="formArray.get([3])">
+                <ng-template matStepLabel>Company</ng-template>
+                <mat-form-field appearance="fill">
+                    <mat-label>Company Name</mat-label>
+                    <input matInput placeholder="Company Name" formControlName="name" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Catchphrase</mat-label>
+                    <input matInput placeholder="Catchphrase" formControlName="catchPhrase" required>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>BS</mat-label>
+                    <input matInput placeholder="BS" formControlName="bs" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious type="button">Previous</button>
+                    <button mat-button matStepperNext type="button">Next</button>
                 </div>
-            </div>
-        </div>
-        <div class="formGroup" formGroupName="address">
-            <h3>Address</h3>
-            <label>
-                <p>Street:</p>
-                <input type="text" formControlName="street">
-            </label>
-            <div *ngIf="street.invalid && (street.dirty || street.touched)" class="alert">
-                <div *ngIf="street.errors?.required">
-                    Street is required
+            </mat-step>
+            <mat-step formGroupName="4" [stepControl]="formArray.get([4])">
+                <ng-template matStepLabel>Press Submit to Finish</ng-template>
+                <div>
+                    <button mat-button matStepperPrevious type="button">Previous</button>
+                    <button mat-button (click)="stepper.reset()" type="button">Reset</button>
+                    <button mat-button type="submit">Submit</button>
                 </div>
-            </div>
-            <label>
-                <p>Suite:</p>
-                <input type="text" formControlName="suite">
-            </label>
-            <div *ngIf="suite.invalid && (suite.dirty || suite.touched)" class="alert">
-                <div *ngIf="suite.errors?.required">
-                    Suite is required
-                </div>
-            </div>
-            <label>
-                <p>City:</p>
-                <input type="text" formControlName="city">
-            </label>
-            <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert">
-                <div *ngIf="city.errors?.required">
-                    City is required
-                </div>
-            </div>
-            <label>
-                <p>ZIP Code:</p>
-                <input type="text" formControlName="zipcode">
-            </label>
-            <div *ngIf="zipcode.invalid && (zipcode.dirty || zipcode.touched)" class="alert">
-                <div *ngIf="zipcode.errors?.required">
-                    ZIP Code is required
-                </div>
-                <div *ngIf="zipcode.errors?.pattern">
-                    ZIP Code format must be XXXXX or XXXXX-XXXX (each X is an integer)
-                </div>
-            </div>
-            <label>
-                <p>Latitude:</p>
-                <input type="text" formControlName="lat">
-            </label>
-            <div *ngIf="lat.invalid && (lat.dirty || lat.touched)" class="alert">
-                <div *ngIf="lat.errors?.required">
-                    Latitude is required
-                </div>
-                <div *ngIf="lat.errors?.pattern">
-                    Latitude format must be XX.XXXX or XXX.XXXX (e.g. -37.3159)
-                </div>
-            </div>
-            <label>
-                <p>Longitude:</p>
-                <input type="text" formControlName="lng">
-            </label>
-            <div *ngIf="lng.invalid && (lng.dirty || lng.touched)" class="alert">
-                <div *ngIf="lng.errors?.required">
-                    Longitude is required
-                </div>
-                <div *ngIf="lng.errors?.pattern">
-                    Longitude format must be XX.XXXX or XXX.XXXX (e.g. 81.1496)
-                </div>
-            </div>
-        </div>
-        <div class="formGroup">
-            <label>
-                Phone Number:
-                <input type="text" formControlName="phone">
-            </label>
-            <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert">
-                <div *ngIf="phone.errors?.required">
-                    Phone number is required
-                </div>
-                <div *ngIf="phone.errors?.pattern">
-                    <p>Phone number invalid</p>
-                    <p>Examples of valid phone numbers:</p>
-                    <ul>
-                        <li>18051231234</li>
-                        <li>1-805-123-1234</li>
-                        <li>1-805-123-1234 x1234</li>
-                    </ul>
-                </div>
-            </div>
-            <label>
-                Website:
-                <input type="text" formControlName="website">
-            </label>
-            <div *ngIf="website.invalid && (website.dirty || website.touched)" class="alert">
-                <div *ngIf="website.errors?.required">
-                    Website is required
-                </div>
-            </div>
-        </div>
-        <div class="formGroup" formGroupName="company">
-            <h3>Company</h3>
-            <label>
-                Name:
-                <input type="text" formControlName="name">
-            </label>
-            <div *ngIf="companyName.invalid && (companyName.dirty || companyName.touched)" class="alert">
-                <div *ngIf="companyName.errors?.required">
-                    Company name is required
-                </div>
-            </div>
-            <label>
-                Catchphrase:
-                <input type="text" formControlName="catchPhrase">
-            </label>
-            <div *ngIf="catchPhrase.invalid && (catchPhrase.dirty || catchPhrase.touched)" class="alert">
-                <div *ngIf="catchPhrase.errors?.required">
-                    Catchphrase is required
-                </div>
-            </div>
-            <label>
-                <p>BS:</p>
-                <input type="text" formControlName="bs">
-            </label>
-            <div *ngIf="bs.invalid && (bs.dirty || bs.touched)" class="alert">
-                <div *ngIf="bs.errors?.required">
-                    BS is required
-                </div>
-            </div>
-        </div>
-        <button type="submit" class="submit-button" [disabled]="userForm.invalid">Submit</button> -->
-    <!-- </form> -->
+            </mat-step>
+        </mat-stepper>
+    </form>
 </div>
