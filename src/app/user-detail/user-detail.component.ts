@@ -4,11 +4,20 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user-detail.component.html',
-  styleUrls: ['./user-detail.component.css']
+  styleUrls: ['./user-detail.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate(500, style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class UserDetailComponent implements OnInit {
   public userId;

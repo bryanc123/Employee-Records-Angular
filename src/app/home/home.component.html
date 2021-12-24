@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <div class="menu-item-container">
+    <div class="menu-item-container" [@fadeIn]>
         <h2>
             View employee records
         </h2>
@@ -14,10 +14,10 @@
             <li>Company Name</li>
         </ul>
         <div class="button-container">
-        <button routerLink="/users" class="user-records-button">User Records</button>
+            <button routerLink="/users" class="user-records-button">User Records</button>
         </div>
     </div>
-    <div class="menu-item-container">
+    <div class="menu-item-container" [@fadeIn]>
         <h2>
             Create an employee record
         </h2>
@@ -25,7 +25,7 @@
             <strong>Note:</strong> JSONPlaceholder is only a <strong>test API</strong>, so POST requests do not actually modify data on the server
         </p>
         <div class="button-container">
-        <button routerLink="/add-user" class="add-user-button">Add User</button>
+            <button routerLink="/add-user" class="add-user-button">Add User</button>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<section class="article">
+<section class="article" [@fadeIn]>
     <a routerLink="/users/{{user.id}}/articles" class="back-button">Back to Articles</a>
     <div class="article__container">
         <img src="assets/images/computer.jpg" class="article__image" *ngIf="articleId % 2 === 1">
@@ -50,7 +50,7 @@
 <section class="comments">
     <div class="comments__container">
         <h2 class="comments__heading">Comments</h2>
-        <div class="comments__body">
+        <div class="comments__body" [@staggerList]="comments.length">
             <div class="comment" *ngFor="let comment of comments">
                 <div class="comment__heading" style="align-items: center; display: flex">
                     <div class="comment__profile-image">

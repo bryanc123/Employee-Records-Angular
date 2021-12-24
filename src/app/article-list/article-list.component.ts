@@ -7,12 +7,25 @@ import { Article } from '../article';
 
 import { UserService } from '../user.service';
 import { ArticleService } from '../article.service';
+import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
 
 
 @Component({
   selector: 'app-article-list',
   templateUrl: './article-list.component.html',
-  styleUrls: ['./article-list.component.css']
+  styleUrls: ['./article-list.component.css'],
+  animations: [
+    trigger('staggerList', [
+      transition('void => *', [
+        query('.article', [
+          style({ opacity: 0 }),
+          stagger(200, [
+            animate(750, style({ opacity: 1 }))
+          ])
+        ])
+      ])
+    ])
+  ]
 })
 export class ArticleListComponent implements OnInit {
   public userId: number;

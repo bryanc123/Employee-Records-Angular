@@ -8,11 +8,30 @@ import { Comment } from '../comment';
 import { UserService } from '../user.service';
 import { ArticleService } from '../article.service';
 import { CommentService } from '../comment.service';
+import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate(500, style({ opacity: 1 }))
+      ])
+    ]),
+    trigger('staggerList', [
+      transition('void => *', [
+        query('.comment', [
+          style({ opacity: 0 }),
+          stagger(200, [
+            animate(750, style({ opacity: 1 }))
+          ])
+        ])
+      ])
+    ])
+  ]
 })
 export class ArticleComponent implements OnInit {
   public userId: number;

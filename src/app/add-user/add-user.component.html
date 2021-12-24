@@ -8,7 +8,7 @@
         <i class="fa fa-times" (click)="closeSuccessMessage()"></i>
     </div>
 </div>
-<div class="formContainer">
+<div class="formContainer" [@fadeIn]>
     <h2>Add Employee Record</h2>
 
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">

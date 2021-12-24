@@ -5,14 +5,18 @@
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 3fr 2fr 2fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 900px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
 }
 
 .footer-section-heading {
     margin-bottom: 10px;
-    text-decoration: underline;
 }
 
 .footer-section ul {
@@ -29,11 +33,8 @@
     color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
     .footer-container {
-        grid-template-columns: 1fr;
-    }
-    .footer-section {
-        margin-bottom: 20px;
+        flex-direction: row;
     }
 }

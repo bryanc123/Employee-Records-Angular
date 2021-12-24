@@ -3,11 +3,20 @@ import { FormBuilder, FormGroup, FormControl, Validators, FormArray, AbstractCon
 
 import { UserService } from '../user.service';
 import { User } from '../user';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
-  styleUrls: ['./add-user.component.css']
+  styleUrls: ['./add-user.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate(500, style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class AddUserComponent implements OnInit {
 
