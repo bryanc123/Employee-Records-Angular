@@ -22,8 +22,8 @@ import { trigger, transition, query, style, animate, stagger } from '@angular/an
   ]
 })
 export class UserListComponent implements OnInit {
-  users: User[];
-  error: any;
+  public users: User[];
+  public error: any;
 
   constructor(private userService: UserService) { }
 
