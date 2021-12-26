@@ -100,6 +100,9 @@ form button:disabled {
     padding: 20px;
     width: 90%;
 }
+.formContainer h2 {
+    font-size: 1.4rem;
+}
 
 .formGroup {
     margin-bottom: 20px;
@@ -137,8 +140,14 @@ form button:disabled {
     cursor: default;
 }
 
+@media only screen and (min-width: 360px) {
+    .formContainer h2 {
+        font-size: 1.5rem;
+    }
+}
+
 @media only screen and (min-width: 500px) {
     .formContainer {
-        width: 320px;
+        max-width: 320px;
     }
 }
