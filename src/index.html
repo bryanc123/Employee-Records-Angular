@@ -18,20 +18,19 @@
 </body>
 </html>
 <script>
-  // hamburger menu
   function toggleMenu() {
-    let x = document.querySelector(".hamburger-menu");
-    let openIcon = document.querySelector(".fa-bars");
-    let closeIcon = document.querySelector(".fa-times");
-    
-    if (x.style.display === "flex") {
-        x.style.display = "none";
-        openIcon.style.display = "block";
-        closeIcon.style.display = "none";
+    var menu = document.querySelector(".hamburger-menu");
+    let openButton = document.querySelector(".fa-bars");
+    let closeButton = document.querySelector(".fa-times");
+
+    if (menu.style.maxHeight) {
+        menu.style.maxHeight = null;
+        openButton.style.display = "block";
+        closeButton.style.display = "none";
     } else {
-        x.style.display = "flex";
-        openIcon.style.display = "none";
-        closeIcon.style.display = "block";
-    }
-}
+        menu.style.maxHeight = menu.scrollHeight + "px";
+        openButton.style.display = "none";
+        closeButton.style.display = "block";
+    } 
+  }
 </script>

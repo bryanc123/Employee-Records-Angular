@@ -16,14 +16,12 @@
 .header__title a {
     color: black;
     font-family: Ubuntu;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
 .navigation-menu {
-    display: flex;
-    justify-self: end;
-    list-style: none;
+    display: none;
 }
 .navigation-menu li a {
     color: black;
@@ -41,7 +39,7 @@
 
 .hamburger-menu-icon {
     color: black;
-    display: none;
+    display: block;
     flex-grow: 1;
     text-align: right;
     text-decoration: none;
@@ -54,8 +52,11 @@
 
 .hamburger-menu {
     background-color: orange;
-    display: none;
+    display: flex;
     flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 .hamburger-menu a {
     border-bottom: 1px solid #FFD280;
@@ -73,20 +74,22 @@
     padding: 20px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (min-width: 600px){
 
     .header__title a {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (min-width: 800px){
 
     .navigation-menu {
-        display: none;
+        display: flex;
+        justify-self: end;
+        list-style: none;
     }
 
     .hamburger-menu-icon {
-        display: block;
+        display: none;
     }
 }
