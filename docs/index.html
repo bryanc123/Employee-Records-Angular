@@ -15,23 +15,22 @@
 <link rel="stylesheet" href="styles.2b36306f03236278.css"></head>
 <body>
   <app-root></app-root>
-<script src="runtime.ee74271599a4721b.js" type="module"></script><script src="polyfills.5425e0f4e06bac42.js" type="module"></script><script src="vendor.e0c7a9dd57504555.js" type="module"></script><script src="main.882351f319966d69.js" type="module"></script></body>
+<script src="runtime.ee74271599a4721b.js" type="module"></script><script src="polyfills.5425e0f4e06bac42.js" type="module"></script><script src="vendor.e0c7a9dd57504555.js" type="module"></script><script src="main.d45815fac0daa5df.js" type="module"></script></body>
 </html>
 <script>
-  // hamburger menu
   function toggleMenu() {
-    let x = document.querySelector(".hamburger-menu");
-    let openIcon = document.querySelector(".fa-bars");
-    let closeIcon = document.querySelector(".fa-times");
-    
-    if (x.style.display === "flex") {
-        x.style.display = "none";
-        openIcon.style.display = "block";
-        closeIcon.style.display = "none";
+    var menu = document.querySelector(".hamburger-menu");
+    let openButton = document.querySelector(".fa-bars");
+    let closeButton = document.querySelector(".fa-times");
+
+    if (menu.style.maxHeight) {
+        menu.style.maxHeight = null;
+        openButton.style.display = "block";
+        closeButton.style.display = "none";
     } else {
-        x.style.display = "flex";
-        openIcon.style.display = "none";
-        closeIcon.style.display = "block";
-    }
-}
+        menu.style.maxHeight = menu.scrollHeight + "px";
+        openButton.style.display = "none";
+        closeButton.style.display = "block";
+    } 
+  }
 </script>
