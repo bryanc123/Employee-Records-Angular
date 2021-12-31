@@ -13,6 +13,11 @@ input[type="text"] {
     width: 250px;
 }
 
+mat-form-field {
+    display: block;
+    max-width: 500px;
+}
+
 p {
     margin-bottom: 10px;
 }
@@ -146,8 +151,8 @@ form button:disabled {
     }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 1000px) {
     .formContainer {
-        max-width: 320px;
+        min-height: 70vh;
     }
 }

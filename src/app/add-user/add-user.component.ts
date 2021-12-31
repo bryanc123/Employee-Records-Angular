@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray, AbstractControl } from '@angular/forms';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import {StepperOrientation} from '@angular/material/stepper';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 import { UserService } from '../user.service';
 import { User } from '../user';
@@ -26,11 +30,18 @@ export class AddUserComponent implements OnInit {
   public error: any;
 
   userForm: FormGroup;
+
+  stepperOrientation: Observable<StepperOrientation>;
   
   constructor(
     private formBuilder: FormBuilder,
+    private breakpointObserver: BreakpointObserver,
     private userService: UserService
-  ) { }
+  ) { 
+    this.stepperOrientation = breakpointObserver
+      .observe('(min-width: 1000px)')
+      .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
+  }
 
   reset() {
     this.stepper.reset();

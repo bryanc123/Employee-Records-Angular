@@ -12,7 +12,7 @@
     <h2>Add Employee Record</h2>
 
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-        <mat-stepper orientation="vertical" [linear]="true" formArrayName="formArray" #stepper>
+        <mat-stepper [orientation]="(stepperOrientation | async)!" [linear]="false" formArrayName="formArray" #stepper>
             <mat-step formGroupName="0" [stepControl]="formArray.get([0])">
                 <ng-template matStepLabel>Name</ng-template>
                 <mat-form-field appearance="fill">
@@ -116,10 +116,12 @@
                 </div>
             </mat-step>
             <mat-step formGroupName="4" [stepControl]="formArray.get([4])">
-                <ng-template matStepLabel>Press Submit to Finish</ng-template>
+                <ng-template matStepLabel>Done</ng-template>
                 <div>
                     <button mat-button matStepperPrevious type="button">Previous</button>
+                    <p>Press Reset to clear all form fields and start over</p>
                     <button mat-button (click)="stepper.reset()" type="button">Reset</button>
+                    <p>Press Submit to finish</p>
                     <button mat-button type="submit">Submit</button>
                 </div>
             </mat-step>
