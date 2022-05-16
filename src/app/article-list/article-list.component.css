@@ -1,3 +1,14 @@
+.articles {
+    background-color: #F0F0F0;
+    padding: 20px;
+}
+
+.articles__wrapper {
+    margin: 0 auto;
+    max-width: 1300px;
+    min-height: 80vh;
+}
+
 .back-button {
     background-color: orange;
     border-radius: 10px;
@@ -10,13 +21,6 @@
 }
 .back-button:hover {
     background-color: #FFD280;
-}
-
-/* Articles */
-
-.articles {
-    background-color: #F0F0F0;
-    padding: 20px;
 }
 
 .articles__heading {

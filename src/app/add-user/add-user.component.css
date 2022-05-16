@@ -68,6 +68,14 @@ form button:disabled {
     cursor: pointer;
 }
 
+/* Form */
+
+.add-user__container {
+    margin: 0 auto;
+    max-width: 1300px;
+    min-height: 80vh;
+}
+
 /* Note */
 
 .note {
@@ -96,14 +104,11 @@ form button:disabled {
     cursor: pointer;
 }
 
-/* Form */
-
 .formContainer {
     background:white;
     border: 2px solid #D8D8D8;
-    margin: 20px auto;
+    margin: 20px;
     padding: 20px;
-    width: 90%;
 }
 .formContainer h2 {
     font-size: 1.4rem;

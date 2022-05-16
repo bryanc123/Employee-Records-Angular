@@ -1,31 +1,33 @@
 <section class="users">
-    <a routerLink="/" class="back-button">Back to Home</a>
-    <p class="users__description">
-        Each profile has a link to articles written by the user
-    </p>
-    <div class="user-container" [@staggerList]="users.length">
-        <div class="user-record" *ngFor="let user of users">
-            <div class="user-record__avatar-container">
-                <div class="user-record__avatar">
-                    <a routerLink="/users/{{user.id}}">
-                        <i class="far fa-user-circle fa-5x"></i>
+    <div class="users__container">
+        <a routerLink="/" class="back-button">Back to Home</a>
+        <p class="users__description">
+            Each profile has a link to articles written by the user
+        </p>
+        <div class="user-records__container" [@staggerList]="users.length">
+            <div class="user" *ngFor="let user of users">
+                <div class="user__container">
+                    <div class="user__avatar">
+                        <a routerLink="/users/{{user.id}}">
+                            <i class="far fa-user-circle fa-5x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="user__details">
+                    <h3>
+                        <a routerLink="/users/{{user.id}}">
+                            <span class="user__name">{{user.name}}</span>
+                        </a>
+                    </h3>
+                    <p><span class="user__field">Email:</span> {{user.email}}</p>
+                    <p><span class="user__field">Phone Number:</span> {{user.phone}}</p>
+                    <p><span class="user__field">Website:</span> {{user.website}}</p>
+                    <p><span class="user__field">Company:</span> {{user.company.name}}</p>
+                    <p><span class="user__catchphrase">"{{user.company.catchPhrase}}"</span></p>
+                    <a routerLink="/users/{{user.id}}/articles" class="user__articles-button">
+                        &gt; Read Articles by this User
                     </a>
                 </div>
-            </div>
-            <div class="user-record__details">
-                <h3>
-                    <a routerLink="/users/{{user.id}}">
-                        <span class="user-record__name">{{user.name}}</span>
-                    </a>
-                </h3>
-                <p><span class="user-record__field">Email:</span> {{user.email}}</p>
-                <p><span class="user-record__field">Phone Number:</span> {{user.phone}}</p>
-                <p><span class="user-record__field">Website:</span> {{user.website}}</p>
-                <p><span class="user-record__field">Company:</span> {{user.company.name}}</p>
-                <p><span class="user-record__catchphrase">"{{user.company.catchPhrase}}"</span></p>
-                <a routerLink="/users/{{user.id}}/articles" class="user-record__articles-button">
-                    &gt; Read Articles by this User
-                </a>
             </div>
         </div>
     </div>

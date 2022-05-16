@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
+header {
+    background: linear-gradient(#F7F7F7 10%, 90%, #CCCCCC 100%);
+}
+
 .header {
     align-items: center;
-    background: linear-gradient(orange 10%, 80%, #FFD280 100%);
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1300px;
     padding: 20px;
 }
 
@@ -27,13 +31,9 @@
     color: black;
     padding: 10px 30px;
     text-decoration: none;
-    transition-duration: 0.2s;
-}
-.navigation-menu li:not(:last-child) a {
-    border-right: 1px solid black;
 }
 .navigation-menu li a:hover {
-    background-color: #FFD280;
+    border-bottom: 2px solid orange;
     cursor: pointer;
 }
 
@@ -67,11 +67,6 @@
 }
 .hamburger-menu a:hover {
     background-color: #FFD280;
-}
-
-.introductory-text-container {
-    background-color: yellow;
-    padding: 20px;
 }
 
 @media screen and (min-width: 600px){

@@ -1,31 +1,32 @@
 <section class="user" [@fadeIn]>
-    <a routerLink="/users" class="back-button">Back to User Records</a>
-    <h2 class="user__heading">{{user.name}} Profile</h2>
-    <p class="user__description">A link to the articles written by this user is included</p>
-    <div class="user-container">
-        <div class="user-record">
-            <div class="user-record__avatar-container">
-                <div class="user-record__avatar">
-                    <i class="far fa-user-circle fa-5x"></i>
+    <div class="user__container">
+        <a routerLink="/users" class="back-button">Back to User Records</a>
+        <h2 class="user__heading">{{user.name}}</h2>
+        <div class="user-container">
+            <div class="user-record">
+                <div class="user-record__avatar-container">
+                    <div class="user-record__avatar">
+                        <i class="far fa-user-circle fa-5x"></i>
+                    </div>
                 </div>
-            </div>
-            <div class="user-record__details">
-                <p><span class="user-record__field">Email:</span> {{user.email}}</p>
-                <p><span class="user-record__field">Address:</span> {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}</p>
-                <p><span class="user-record__field">Phone Number:</span> {{user.phone}}</p>
-                <p><span class="user-record__field">Website:</span> {{user.website}}</p>
-                <p><span class="user-record__field">Company:</span> {{user.company.name}}</p>
-                <p><span class="user-record__catchphrase">"{{user.company.catchPhrase}}"</span></p>
-                <p>
-                    <span class="user-record__field">Description:</span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent interdum condimentum mauris id condimentum.
-                    Nunc egestas sapien quis velit aliquet hendrerit.
-                    Integer vitae felis hendrerit, sollicitudin lacus vel, scelerisque dolor.
-                </p>
-                <a routerLink="/users/{{user.id}}/articles" class="user-record__articles-button">
-                    &gt; Read Articles by this User
-                </a>
+                <div class="user-record__details">
+                    <p><span class="user-record__field">Email:</span> {{user.email}}</p>
+                    <p><span class="user-record__field">Address:</span> {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}</p>
+                    <p><span class="user-record__field">Phone Number:</span> {{user.phone}}</p>
+                    <p><span class="user-record__field">Website:</span> {{user.website}}</p>
+                    <p><span class="user-record__field">Company:</span> {{user.company.name}}</p>
+                    <p><span class="user-record__catchphrase">"{{user.company.catchPhrase}}"</span></p>
+                    <p>
+                        <span class="user-record__field">Description:</span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent interdum condimentum mauris id condimentum.
+                        Nunc egestas sapien quis velit aliquet hendrerit.
+                        Integer vitae felis hendrerit, sollicitudin lacus vel, scelerisque dolor.
+                    </p>
+                    <a routerLink="/users/{{user.id}}/articles" class="user-record__articles-button">
+                        &gt; Read Articles by this User
+                    </a>
+                </div>
             </div>
         </div>
     </div>

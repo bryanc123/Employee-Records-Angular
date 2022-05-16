@@ -12,35 +12,40 @@
     background-color: #FFD280;
 }
 
-/* Users */
+.users__container {
+    margin: 0 auto;
+    max-width: 1300px;
+    min-height: 80vh;
+}
 
 .users__description {
     font-size: 1.2rem;
     margin: 0 0 20px 20px;
 }
 
-.user-container {
+.user-records__container {
     background-color: white;
+    margin: 20px 0;
 }
 
-.user-record {
+.user {
     display: flex;
     padding: 20px;
 }
-.user-record:nth-child(odd) {
+.user:nth-child(odd) {
     background-color: #FFEDCC
 }
 
-.user-record__avatar-container {
+.user__avatar-container {
     padding: 0 10px 20px 10px;
     text-align: center;
 }
-.user-record__avatar-container a {
+.user__avatar-container a {
     color: black;
     text-decoration: none;
 }
 
-.user-record__avatar {
+.user__avatar {
     align-items: center;
     background-color:#ACE1AF;
     border-radius: 50%;
@@ -51,37 +56,40 @@
     margin: 0 auto;
     width: 100px;
 }
+.user__avatar a {
+    color: black;
+}
 
-.user-record__details {
+.user__details {
     line-height: 30px;
     margin-left: 20px;
 }
 
-.user-record__name { 
+.user__name { 
     text-decoration: underline;
 }
 
-.user-record__field {
+.user__field {
     font-weight: bold;
 }
 
-.user-record__catchphrase {
+.user__catchphrase {
     font-style: italic;
 }
 
-.user-record__articles-button {
+.user__articles-button {
     display: inline-block;
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 20px;
     text-decoration: none;
 }
-.user-record__articles-button:hover {
+.user__articles-button:hover {
     text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
-    .user-record {
+    .user {
         flex-direction: column;
     }
 }

@@ -1,32 +1,8 @@
-<div class="wrapper">
-    <div class="menu-item-container" [@fadeIn]>
-        <h2>
-            View employee records
-        </h2>
-        <p>
-            Records include:
-        </p>
-        <ul>
-            <li>Name</li>
-            <li>Email</li>
-            <li>Phone Number</li>
-            <li>Website</li>
-            <li>Company Name</li>
-            <li>Links to Articles</li>
-        </ul>
-        <div class="button-container">
+<section class="home" [ngStyle]="{'background': 'url(assets/images/computer.jpg) no-repeat center', 'backgroundSize': 'cover'}">
+    <div class="home__mask-layer">
+        <div class="home__container">
             <button routerLink="/users" class="user-records-button">View Users</button>
-        </div>
-    </div>
-    <div class="menu-item-container" [@fadeIn]>
-        <h2>
-            Create employee record
-        </h2>
-        <p>
-            <strong>Note:</strong> JSONPlaceholder is only a <strong>test API</strong>, so POST requests do not actually modify data on the server
-        </p>
-        <div class="button-container">
             <button routerLink="/add-user" class="add-user-button">Add User</button>
         </div>
     </div>
-</div>
+</section>

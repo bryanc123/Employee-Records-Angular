@@ -1,3 +1,9 @@
+.user__container {
+    margin: 0 auto;
+    max-width: 1300px;
+    min-height: 80vh;
+}
+
 .back-button {
     background-color: orange;
     border-radius: 10px;
@@ -12,19 +18,12 @@
     background-color: #FFD280;
 }
 
-/* User Record */
-
-.user-container {
+.user-record-container {
     background-color: #FFEDCC;
 }
 
 .user__heading {
     margin: 0 0 10px 20px;
-}
-
-.user__description {
-    font-size: 1.2rem;
-    margin: 0 0 20px 20px;
 }
 
 .user-record {
