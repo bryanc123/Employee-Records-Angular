@@ -11,7 +11,7 @@ import { trigger, transition, query, style, animate, stagger } from '@angular/an
   animations: [
     trigger('staggerList', [
       transition('void => *', [
-        query('.user-record', [
+        query('.user', [
           style({ opacity: 0 }),
           stagger(200, [
             animate(750, style({ opacity: 1 }))
